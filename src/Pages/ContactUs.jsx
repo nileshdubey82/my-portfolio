@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function ContactUs() {
   return (
-    <section className='bg-[#F5F2F9] p-5'>
+    <section className='bg-[#F5F2F9] p-5 my-10'>
       <div className="max-w-md mx-auto mt-10 bg-[#F5F2F9]">
         <h2 className="text-3xl font-bold mb-4 text-center">Contact Us</h2>
         <p className="mb-6 text-center">Please fill out the form below to get in touch with us.</p>
