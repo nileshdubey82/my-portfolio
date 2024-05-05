@@ -1,6 +1,6 @@
 function Services() {
     return (
-        <section id='services' className='bg-transparent relative mt-[-60px]'>
+        <section id='services' className='bg-transparent relative mt-[-60px] '>
             <h1 className='
                         text-center
                         text-4xl
@@ -11,7 +11,7 @@ function Services() {
             <p className='text-center text-gray-400 mt-10' >
                 Full stack developer crafting responsive interfaces, robust backends, API integrations, and efficient deployments. Maintenance and support provided.
             </p>
-            <div className='flex justify-center gap-8 mt-9'>
+            <div className='flex justify-center gap-8 mt-9 flex-wrap'>
                 <div className='text-center w-[300px] p-5 flex flex-col justify-center'>
                     <div className='flex justify-center'>  <img src='/Images/Website-Design.png' width={70} className='align-center text-center' /></div>
                     <h1 className='font-bold text-xl'>Web Site Design</h1>
