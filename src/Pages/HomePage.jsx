@@ -12,14 +12,17 @@ import ContactUs from './ContactUs'
 export default function HomePage() {
     return (
         <>
-            <section id='hero-section' className="bg-[url('/Images/hero-bg.png')]  flex flex-cols justify-center lg:bg-cover bg-center bg-no-repeat lg:h-[1300px] lg:bg-top sm:bg-cover sm:bg-top lg:p-20 sm:p-30 sm:h-[100px] relative">
-                <img src='/Images/bubble1.png' width={166} height={153} className='absolute left-[300px] top-80' />
-                <img src='/Images/bubble1.png' width={166} height={153} className='absolute left-[80px] bottom-72' />
-                <img src='/Images/full-stack.png' width={166} height={153} className='absolute right-[300px] top-96' />
-                <img src='/Images/2exp.png' width={166} height={153} className='absolute left-[200px] bottom-96' />
+            <section id='hero-section' className="bg-[url('/Images/hero-bg.png')] flex flex-cols justify-center lg:bg-cover  bg-no-repeat lg:h-[1300px] lg:bg-top bg-cover  bg-top lg:p-20 p-5 h-[500px] relative rounded-xl">
+                <img src='/Images/bubble1.png' className='absolute w-[50px]   lg:left-[300px] lg:top-80  left-[100px] top-28  ' />
+                <img src='/Images/bubble1.png' className='absolute  w-[50px] lg:left-[80px] lg:bottom-72  left-[30px] bottom-[200px]' />
+                <img src='/Images/full-stack.png' className='  w-[50px] absolute lg:right-[300px] lg:top-96 right-[50px] top-[100px]' />
+                <img src='/Images/2exp.png' className='  w-[50px] absolute lg:left-[200px] lg:bottom-96 left-[50px] bottom-[250px]' />
+
+
+
                 <div>
-                    <h1 className='text-white text-[70px] font-bold'>Hi I &#39;M <span className='text-[#FFD700]'>Nilesh Dubey</span></h1>
-                    <div className='flex justify-center items-center gap-3 text-3xl text-white'>
+                    <h1 className='text-white lg:text-[70px] text-[30px] font-bold'>Hi I &#39;M <span className='text-[#FFD700]'>Nilesh Dubey</span></h1>
+                    <div className='flex justify-center items-center gap-3 lg:text-3xl text-white text-xl'>
                         <a href="mailto:nileshdubey060@gmail.com" target="_blank"><CgMail /></a>
                         <a href="https://www.instagram.com/nileshdubey.in?igsh=NTIwYTg0eGt2Ympq" target="_blank"><AiFillInstagram /></a>
                         <a href="https://wa.link/4kvkuh" target="_blank"><AiOutlineWhatsApp /></a>
