@@ -4,3 +4,7 @@ body{
     /* padding: 10px; */
     font-family: "Lato", sans-serif;
 }
+.custom-cursor {
+    /* cursor: url('../public/Images/cursor.png'), auto; */
+    
+}

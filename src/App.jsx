@@ -8,7 +8,7 @@ import './App.css';
 function App() {
   return (
     <>
-    <div className='p-5 '>
+    <div className='p-5 custom-cursor'>
       <Router>
         <Navigation />
         <Routes>
