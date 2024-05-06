@@ -82,12 +82,12 @@ export default function Portfolio() {
       {
         name: "Woocommerce",
         description: "E-commerce website with Wordpress",
-        image: "https://via.placeholder.com/150",
+        image: "/Images/Projects/luckygirl.png",
       },
       {
         name: "Landing Pages",
         description: "Customized landing pages",
-        image: "https://via.placeholder.com/150",
+        image: "/Images/Projects/socia.png",
       },
     ],
   };
@@ -99,7 +99,7 @@ export default function Portfolio() {
         I develop web & mobile apps with ReactJS, React Native, & WordPress,
         focusing on user experience & efficient functionality
       </p>
-      <div className="flex justify-center gap-5 mt-10">
+      <div className="flex justify-center lg:gap-5 gap-1 mt-10 overflow-auto">
         <div
           className={`px-4 py-2 cursor-pointer ${
             activeTab === "reactjs"
@@ -135,7 +135,7 @@ export default function Portfolio() {
         {projects[activeTab].map((project, index) => (
           <div key={index} className="relative">
             <img
-              className="w-[400px] h-[250px] object-cover rounded-lg cursor-pointer"
+              className="lg:w-[400px] h-[250px] lg:object-cover object-contain rounded-lg cursor-pointer"
               src={project.image}
               alt={project.name}
             />
