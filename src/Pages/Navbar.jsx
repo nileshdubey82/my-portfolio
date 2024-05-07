@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 function Navigation() {
   return (
-    <div className=" sm:p-0">
+    <div className=" sm:p-0 sticky top-0 z-10">
       <div className="navbar bg-[#5F0BB8] p-4 rounded-xl">
         <div className="navbar-start">
           <div className="dropdown">

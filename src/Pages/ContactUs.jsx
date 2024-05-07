@@ -55,7 +55,10 @@ export default function ContactUs() {
   };
 
   return (
-    <section className="bg-white   flex flex-wrap justify-center lg:px-20  lg:py-10 gap-10 w-[100%]">
+    <section
+      className="bg-white   flex flex-wrap justify-center lg:px-20  lg:py-10 gap-10 w-[100%]"
+      id="contactme"
+    >
       <div className="bg-white  lg:my-10 flex flex-wrap justify-center  rounded-md drop-shadow-2xl lg:w-[100%] lg:p-4">
         <div className="bg-[#530C9F] py-10 rounded-md lg:px-10 px-5 flex flex-col justify-between relative lg:w-[40%]">
           <img
