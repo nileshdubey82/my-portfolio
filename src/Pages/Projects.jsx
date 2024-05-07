@@ -87,7 +87,11 @@ export default function Portfolio() {
       {
         name: "Landing Pages",
         description: "Customized landing pages",
+<<<<<<< HEAD
         image: "/Images/Projects/socia.png",
+=======
+        image: "/Images/Projects/landing.png",
+>>>>>>> faf897bac00ba6d2e163ebe341016d09a63f0188
       },
     ],
   };
@@ -99,7 +103,11 @@ export default function Portfolio() {
         I develop web & mobile apps with ReactJS, React Native, & WordPress,
         focusing on user experience & efficient functionality
       </p>
+<<<<<<< HEAD
       <div className="flex justify-center lg:gap-5 gap-1 mt-10 overflow-auto">
+=======
+      <div className="flex justify-center lg:gap-5 gap-1 mt-10">
+>>>>>>> faf897bac00ba6d2e163ebe341016d09a63f0188
         <div
           className={`px-4 py-2 cursor-pointer ${
             activeTab === "reactjs"
