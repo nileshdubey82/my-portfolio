@@ -9,6 +9,7 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import "react-toastify/dist/ReactToastify.css";
+import { motion } from "framer-motion";
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -55,7 +56,10 @@ export default function ContactUs() {
   };
 
   return (
-    <section
+    <motion.section
+    initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  
       className="bg-white   flex flex-wrap justify-center lg:px-20  lg:py-10 gap-10 w-[100%]"
       id="contactme"
     >
@@ -199,6 +203,6 @@ export default function ContactUs() {
         </div>
       </div>
       <ToastContainer position="bottom-right" autoClose={3000} />
-    </section>
+    </motion.section>
   );
 }
