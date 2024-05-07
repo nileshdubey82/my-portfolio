@@ -37,7 +37,7 @@ export default function HomePage() {
           className="   absolute lg:left-auto  lg:bottom-0 left-auto bottom-0 z-10 w-72 lg:w-96"
         />
 
-        <h1 className="absolute lg:top-80 left-auto lg:left-auto top-40 lg:text-[100px] text-[30px] z-[-0] text-[#ffffff18]">
+        <h1 className="absolute lg:top-80 left-auto lg:left-auto top-40 lg:text-[100px] text-[25px] z-[-0] text-[#ffffff18]">
           FULL-STACK DEVELOPER
         </h1>
 
