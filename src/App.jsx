@@ -5,11 +5,18 @@ import AboutUs from './Pages/AboutUs';
 import Projects from './Pages/Projects';
 import Navigation from './Pages/Navbar';
 import TawkToChat from './Pages/TawkToChat';
+import { motion } from "framer-motion";
+
 import './App.css';
 function App() {
   return (
     <>
-    <div className='p-5 '>
+    <motion.div className='p-5 '
+    
+    initial={{ opacity: 0, y: -100 }} // Initial animation state
+      animate={{ opacity: 1, y: 0 }} // Animation state to animate to
+      transition={{ duration: 1 }} // Animation duration
+    >
       <Router>
         <Navigation />
         <TawkToChat/>
@@ -20,7 +27,7 @@ function App() {
           <Route path="/projects" element={<Projects />} />
         </Routes>
       </Router>
-      </div>
+      </motion.div>
     </>
   );
 }
