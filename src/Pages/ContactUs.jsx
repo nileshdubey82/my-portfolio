@@ -60,7 +60,7 @@ export default function ContactUs() {
         <div className="bg-[#530C9F] py-10 rounded-md lg:px-10 px-5 flex flex-col justify-between relative lg:w-[40%]">
           <img
             src="/Images/circlecon.png"
-            className="absolute right-0 bottom-0 w-15 lg:w-36"
+            className="absolute right-0 bottom-0 w-24 lg:w-36"
           />
           <div>
             <h1 className="text-left text-white lg:text-4xl text-2xl font-bold">
