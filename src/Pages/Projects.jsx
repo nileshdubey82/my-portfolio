@@ -105,27 +105,27 @@ export default function Portfolio() {
             activeTab === "reactjs"
               ? "bg-[#5f0bb8] text-white"
               : "bg-gray-200 text-gray-800"
-          } rounded-md`}
+          } rounded-md text-[15px] lg:text-md`}
           onClick={() => handleTabClick("reactjs")}
         >
           ReactJS
         </div>
         <div
-          className={`px-4 py-2 cursor-pointer ${
+          className={`lg:px-4 px-2 py-2 cursor-pointer ${
             activeTab === "reactnative"
               ? "bg-[#5f0bb8] text-white"
               : "bg-gray-200 text-gray-800"
-          } rounded-md`}
+          } rounded-md text-[15px] lg:text-md `}
           onClick={() => handleTabClick("reactnative")}
         >
           React Native
         </div>
         <div
-          className={`px-4 py-2 cursor-pointer ${
+          className={`lg:px-4 px-2 py-2  cursor-pointer ${
             activeTab === "wordpress"
               ? "bg-[#5f0bb8] text-white"
               : "bg-gray-200 text-gray-800"
-          } rounded-md`}
+          } rounded-md text-[15px] lg:text-md`}
           onClick={() => handleTabClick("wordpress")}
         >
           Wordpress
@@ -135,7 +135,7 @@ export default function Portfolio() {
         {projects[activeTab].map((project, index) => (
           <div key={index} className="relative">
             <img
-              className="w-[400px] h-[250px] object-cover rounded-lg cursor-pointer"
+              className="w-[400px] h-[250px] lg:object-cover object-contain rounded-lg cursor-pointer"
               src={project.image}
               alt={project.name}
             />

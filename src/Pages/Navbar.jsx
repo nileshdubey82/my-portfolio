@@ -87,9 +87,9 @@ function Navigation() {
         <div className="navbar-end">
           <a
             className="btn btn-md text-[#5F0BB8]font-bold"
-            href="/Images/nilesh_Resume_final.pdf"
+            href="mailto:nileshdubey060@gmail.com"
             target="_blank"
-            download
+            
           >
             Hire me
           </a>
