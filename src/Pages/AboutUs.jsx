@@ -1,21 +1,71 @@
+import { BsFiletypePhp } from "react-icons/bs";
+import { SiMysql } from "react-icons/si";
+import { BsFiletypeHtml } from "react-icons/bs";
+import { SiTailwindcss } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
+import { TbBrandReactNative } from "react-icons/tb";
+import { DiReact } from "react-icons/di";
 import { BiCloudDownload } from "react-icons/bi";
-/* eslint-disable react/no-unescaped-entities */
-import React from "react";
+
 
 function AboutUs() {
+
+  const Skills = [
+    {
+      id: 1,
+      Name: "React Js",
+      Icon: <DiReact />
+    },
+    {
+      id: 2,
+      Name: "React Native",
+      Icon: <TbBrandReactNative />
+    }
+    ,
+    {
+      id: 3,
+      Name: "NextJs",
+      Icon: <TbBrandNextjs />
+    }
+    ,
+    {
+      id: 4,
+      Name: "Tailwind/Bootstrap",
+      Icon: <SiTailwindcss />
+    }
+    ,
+    {
+      id: 5,
+      Name: "Git & GitHub",
+      Icon: <BsFiletypeHtml />
+    }
+    ,
+    {
+      id: 5,
+      Name: "Mysql",
+      Icon: <SiMysql />
+    }
+    ,
+    {
+      id: 5,
+      Name: "Php",
+      Icon: <BsFiletypePhp />
+    }
+  ]
+
   return (
     <section id="aboutme" className="lg:py-10 sm:0-5 py-10">
-      <div className="bg-[#5f0bb8] p-5 rounded-xl">
-        <div className="bg-white rounded-xl px-5 pt-5">
+      <div className="bg-[#f9f8fb] p-3 lg:p-5 rounded-xl">
+        <div className="bg-white rounded-xl p-5 ">
           <h1 className="text-black text-4xl text-center">About Me</h1>
           <p className="text-center mt-3">
             Tech-savvy individual with a passion for innovation, a knack for
             problem-solving, and a love for creative expression through design.
           </p>
           <div className="lg:flex mt-10 flex-wrap">
-            <div className="flex-1 flex justify-center">
+            <div className="flex-1 flex justify-center p-2">
               {" "}
-              <img src="/Images/profilepick-done1.png" className="image-full" />
+              <img src="/Images/about-pick.png" className="image-full" />
             </div>
             <div className="flex-1 items-center flex align-middle justify-center ">
               <div className="lg:px-10 mt-10 lg:mt-0 ">
@@ -53,77 +103,23 @@ function AboutUs() {
           </div>
         </div>
 
-        <div className="flex py-5 gap-9 justify-center flex-wrap">
-          <div className="bg-white lg:p-8 p-5 rounded-md ">
-            <div
-              className="radial-progress text-[#6E0FD4]"
-              style={{ "--value": 70 }}
-              role="progressbar"
-            >
-              70%
-            </div>
-            <h1 className="font-bold text-center">React JS</h1>
-          </div>
-          <div className="bg-white lg:p-8 p-5  rounded-md">
-            <div
-              className="radial-progress text-[#6E0FD4]"
-              style={{ "--value": 75 }}
-              role="progressbar"
-            >
-              75%
-            </div>
-            <h1 className="font-bold text-center">React Native</h1>
-          </div>
-          <div className="bg-white lg:p-8 p-5  rounded-md">
-            <div
-              className="radial-progress text-[#6E0FD4]"
-              style={{ "--value": 95 }}
-              role="progressbar"
-            >
-              95%
-            </div>
-            <h1 className="font-bold text-center">HTML/CSS</h1>
-          </div>
-          <div className="bg-white lg:p-8 p-5  rounded-md">
-            <div
-              className="radial-progress text-[#6E0FD4]"
-              style={{ "--value": 80 }}
-              role="progressbar"
-            >
-              80%
-            </div>
-            <h1 className="font-bold text-center">Tailwind</h1>
-          </div>
-          <div className="bg-white lg:p-8 p-5  rounded-md">
-            <div
-              className="radial-progress text-[#6E0FD4]"
-              style={{ "--value": 40 }}
-              role="progressbar"
-            >
-              40%
-            </div>
-            <h1 className="font-bold text-center">Node/NextJs</h1>
-          </div>
-          <div className="bg-white lg:p-8 p-5  rounded-md">
-            <div
-              className="radial-progress text-[#6E0FD4]"
-              style={{ "--value": 50 }}
-              role="progressbar"
-            >
-              50%
-            </div>
-            <h1 className="font-bold text-center">MySql</h1>
-          </div>
-          <div className="bg-white lg:p-8 p-5  rounded-md">
-            <div
-              className="radial-progress text-[#6E0FD4]"
-              style={{ "--value": 50 }}
-              role="progressbar"
-            >
-              50%
-            </div>
-            <h1 className="font-bold text-center">Git&Github</h1>
-          </div>
+              <h1 className="text-4xl text-center mt-10 font-bold underline">Skills</h1>
+        <div className="flex py-5 gap-9 justify-center flex-wrap ">
+          {Skills.map((i) => {
+            return (<>
+              <div className="bg-white lg:p-8 p-5 rounded-md gap-2 flex flex-col justify-center w-[300px]">
+                <div
+                  className="flex justify-center text-[#5d0db3] text-5xl "
+                >
+                  {i.Icon}
+                </div>
+                <h1 className="font-bold text-center">{i.Name}</h1>
+              </div>
+            </>)
+          })}
+
+
+
         </div>
       </div>
     </section>

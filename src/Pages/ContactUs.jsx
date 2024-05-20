@@ -1,3 +1,4 @@
+import { BsVoicemail } from "react-icons/bs"; 
 import { HiLocationMarker } from "react-icons/hi";
 import { CgMail } from "react-icons/cg";
 import { AiFillPhone } from "react-icons/ai";
@@ -63,36 +64,36 @@ export default function ContactUs() {
       className="bg-white   flex flex-wrap justify-center lg:px-20  lg:py-10 gap-10 w-[100%]"
       id="contactme"
     >
-      <div className="bg-white  lg:my-10 flex flex-wrap justify-center  rounded-md drop-shadow-2xl lg:w-[100%] lg:p-4">
-        <div className="bg-[#530C9F] py-10 rounded-md lg:px-10 px-5 flex flex-col justify-between relative lg:w-[40%]">
+      <div className="bg-white  lg:my-10 flex flex-wrap justify-center  rounded-md drop-shadow-2xl w-[90%] lg:w-[100%] lg:p-4">
+        <div className="bg-[#530C9F] py-10 rounded-md lg:px-10  flex flex-col justify-between relative lg:w-[40%]">
           <img
             src="/Images/circlecon.png"
             className="absolute right-0 bottom-0 w-24 lg:w-36"
           />
           <div>
-            <h1 className="text-left text-white lg:text-4xl text-2xl font-bold">
+            <h1 className="text-left text-white lg:text-4xl text-2xl font-bold px-4">
               Contact Information
             </h1>
-            <p className="text-left text-white">
+            <p className="text-left text-white px-4">
               Say something to start a live chat!
             </p>
           </div>
 
-          <div className="text-white mt-10 lg:mt-0">
+          <div className="text-white mt-10 lg:mt-0 px-4">
             <p className="flex items-center gap-5 lg:text-xl text-md">
               <AiFillPhone /> :<a href="tel:916267751993">+91 6267751993</a>{" "}
             </p>
-            <p className="flex items-center gap-5 text-xl lg:mt-10">
+            <p className="flex items-center gap-5 lg:text-xl text-md lg:mt-10">
               <CgMail /> :{" "}
               <a href="mailto:nileshdubey060@gmail.com">
                 nileshdubey060@gmail.com
               </a>
             </p>
-            <p className="flex items-center gap-5 text-xl lg:mt-10">
+            <p className="flex items-center gap-5 lg:text-xl text-md lg:mt-10">
               <HiLocationMarker /> : <a> Bhilai Chhattishgarh.</a>
             </p>
           </div>
-          <div className="mt-20 lg:mt-0">
+          <div className="mt-20 lg:mt-0 px-4">
             <div className="flex flex-wrap gap-4 text-4xl text-white">
               <a href="mailto:nileshdubey060@gmail.com" target="_blank">
                 <CgMail />
@@ -103,22 +104,23 @@ export default function ContactUs() {
               >
                 <AiFillInstagram />
               </a>
-              <a href="https://wa.link/4kvkuh" target="_blank">
+              <a href="https://wa.link/4kvkuh" target="_blank" className="relative z-1">
                 <AiOutlineWhatsApp />
               </a>
               <a
                 href="https://www.linkedin.com/in/nilesh-dubey-ba4197222"
                 target="_blank"
+                className="relative z-1"
               >
                 <AiFillLinkedin />
               </a>
-              <a href="https://github.com/nileshdubey82" target="_blank">
+              <a href="https://github.com/nileshdubey82" target="_blank" className="relative z-1">
                 <AiFillGithub />
               </a>
             </div>
           </div>
         </div>
-        <div className="p-5 lg:w-[60%] h-[647px] relative py-10">
+        <div className="p-5 lg:w-[60%] h-[647px] relative py-10 w-[100%]">
           <form onSubmit={sendEmail} className="space-y-6">
             {/* Personal Information Section */}
             <div>
