@@ -6,10 +6,24 @@ import { TbBrandNextjs } from "react-icons/tb";
 import { TbBrandReactNative } from "react-icons/tb";
 import { DiReact } from "react-icons/di";
 import { BiCloudDownload } from "react-icons/bi";
-
-
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from "react";
 function AboutUs() {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
 
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 2,
+        },
+      });
+    }
+  }, [controls, inView]);
   const Skills = [
     {
       id: 1,
@@ -54,7 +68,9 @@ function AboutUs() {
   ]
 
   return (
-    <section id="aboutme" className="lg:py-10 sm:0-5 py-10">
+    <motion.section id="aboutme" className="lg:py-10 sm:0-5 py-10" initial={{ opacity: 0, y: 20 }}
+      animate={controls}
+      ref={ref}>
       <div className="bg-[#f9f8fb] p-3 lg:p-5 rounded-xl">
         <div className="bg-white rounded-xl p-5 ">
           <h1 className="text-black text-4xl text-center">About Me</h1>
@@ -103,11 +119,13 @@ function AboutUs() {
           </div>
         </div>
 
-              <h1 className="text-4xl text-center mt-10 font-bold underline">Skills</h1>
-        <div className="flex py-5 gap-9 justify-center flex-wrap ">
+        <h1 className="text-4xl text-center mt-10 font-bold underline">Skills</h1>
+        <motion.div className="flex py-5 gap-9 justify-center flex-wrap " initial={{ opacity: 0, y: 20 }}
+      animate={controls}
+      ref={ref}>
           {Skills.map((i) => {
             return (<>
-              <div className="bg-white lg:p-8 p-5 rounded-md gap-2 flex flex-col justify-center w-[300px]">
+              <div className="bg-white lg:p-8 p-5 rounded-md gap-2 flex flex-col justify-center w-[200px]">
                 <div
                   className="flex justify-center text-[#5d0db3] text-5xl "
                 >
@@ -120,9 +138,9 @@ function AboutUs() {
 
 
 
-        </div>
+        </motion.div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 

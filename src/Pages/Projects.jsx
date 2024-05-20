@@ -1,12 +1,26 @@
-import React, { useState } from "react";
-
+import React, { useState ,useEffect} from "react";
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from "framer-motion";
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState("reactjs");
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
 
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 2,
+        },
+      });
+    }
+  }, [controls, inView]);
   const projects = {
     reactjs: [
       {
@@ -93,7 +107,9 @@ export default function Portfolio() {
   };
 
   return (
-    <section id="projects">
+    <motion.section id="projects" initial={{ opacity: 0, y: 20 }}
+    animate={controls}
+ref={ref}>
       <h1 className="text-center text-3xl font-bold">Projects</h1>
       <p className="text-center text-gray-500 mt-4">
         I develop web & mobile apps with ReactJS, React Native, & WordPress,
@@ -111,7 +127,7 @@ export default function Portfolio() {
           ReactJS
         </div>
         <div
-          className={`lg:px-4 px-2 py-2 cursor-pointer ${
+          className={`px-4 py-2 cursor-pointer ${
             activeTab === "reactnative"
               ? "bg-[#5f0bb8] text-white"
               : "bg-gray-200 text-gray-800"
@@ -121,7 +137,7 @@ export default function Portfolio() {
           React Native
         </div>
         <div
-          className={`lg:px-4 px-2 py-2  cursor-pointer ${
+          className={`px-4 py-2 cursor-pointer ${
             activeTab === "wordpress"
               ? "bg-[#5f0bb8] text-white"
               : "bg-gray-200 text-gray-800"
@@ -168,6 +184,6 @@ export default function Portfolio() {
           </div>
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }
