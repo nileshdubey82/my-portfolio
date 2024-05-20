@@ -1,8 +1,8 @@
-import { BsVoicemail } from "react-icons/bs"; 
+import { BsVoicemail } from "react-icons/bs";
 import { HiLocationMarker } from "react-icons/hi";
 import { CgMail } from "react-icons/cg";
 import { AiFillPhone } from "react-icons/ai";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import emailjs from "emailjs-com";
 import { ToastContainer, toast } from "react-toastify";
 import { AiFillGithub } from "react-icons/ai";
@@ -10,8 +10,8 @@ import { AiFillLinkedin } from "react-icons/ai";
 import { AiOutlineWhatsApp } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import "react-toastify/dist/ReactToastify.css";
-import { motion } from "framer-motion";
-
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from 'react-intersection-observer';
 export default function ContactUs() {
   const [formData, setFormData] = useState({
     name: "",
@@ -19,7 +19,20 @@ export default function ContactUs() {
     phone: "",
     message: "",
   });
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
 
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 2,
+        },
+      });
+    }
+  }, [controls, inView]);
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData({
@@ -58,9 +71,12 @@ export default function ContactUs() {
 
   return (
     <motion.section
-    initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  
+      // initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      ref={ref}
+      initial={{ opacity: 0, y: 20 }}
+      animate={controls}
+
       className="bg-white   flex flex-wrap justify-center lg:px-20  lg:py-10 gap-10 w-[100%]"
       id="contactme"
     >
@@ -120,12 +136,12 @@ export default function ContactUs() {
             </div>
           </div>
         </div>
-        <div className="p-5 lg:w-[60%] h-[647px] relative py-10 w-[100%]">
+        <div className="p-5 lg:w-[60%] lg:h-[647px] relative py-10 w-[100%]">
           <form onSubmit={sendEmail} className="space-y-6">
             {/* Personal Information Section */}
             <div>
               {/* <h3 className="text-lg font-semibold mb-2">Personal Information</h3> */}
-              <div className="grid grid-cols-2 gap-4">
+              <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
                 <div>
                   <label htmlFor="name" className="block font-semibold">
                     Name
@@ -140,7 +156,26 @@ export default function ContactUs() {
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block font-semibold">
+                <label htmlFor="phone" className="block font-semibold">
+                  Contact Number
+                </label>
+                  <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-400"
+                />
+                </div>
+              </div>
+            </div>
+            {/* Contact Information Section */}
+            <div>
+              {/* <h3 className="text-lg font-semibold mb-2">Contact Information</h3> */}
+              <div>
+               
+                <label htmlFor="email" className="block font-semibold">
                     Email
                   </label>
                   <input
@@ -151,24 +186,6 @@ export default function ContactUs() {
                     onChange={handleChange}
                     className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-400"
                   />
-                </div>
-              </div>
-            </div>
-            {/* Contact Information Section */}
-            <div>
-              {/* <h3 className="text-lg font-semibold mb-2">Contact Information</h3> */}
-              <div>
-                <label htmlFor="phone" className="block font-semibold">
-                  Contact Number
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-400"
-                />
               </div>
             </div>
             {/* Inquiry Section */}
@@ -200,7 +217,7 @@ export default function ContactUs() {
           </form>
           <img
             src="/Images/letter_send.png"
-            className="absolute bottom-0 right-5"
+            className="absolute bottom-0 right-5 hidden lg:block"
           />
         </div>
       </div>

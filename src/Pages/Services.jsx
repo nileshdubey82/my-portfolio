@@ -1,6 +1,26 @@
+
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from "framer-motion";
+import { useEffect } from 'react';
 function Services() {
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 2,
+        },
+      });
+    }
+  }, [controls, inView]);
   return (
-    <section id="services" className="bg-transparent relative mt-10">
+    <motion.section id="services" className="bg-transparent relative mt-10" initial={{ opacity: 0, y: 20 }}
+      animate={controls}
+      ref={ref}>
       <h1
         className="
                         text-center
@@ -66,7 +86,7 @@ function Services() {
           </p>
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 }
 
