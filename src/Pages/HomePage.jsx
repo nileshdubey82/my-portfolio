@@ -9,6 +9,7 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import Footer from "./Footer";
 import ContactUs from "./ContactUs";
+import Achivements from "./Achivements";
 export default function HomePage() {
   return (
     <>
@@ -76,6 +77,9 @@ export default function HomePage() {
       <AboutUs />
       {/* For Projects */}
       <Projects/>
+        {/* For achivements */}
+        <Achivements/>
+
 
       {/* Contact Us */}
       <ContactUs />
