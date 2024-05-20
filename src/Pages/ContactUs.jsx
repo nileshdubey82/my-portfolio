@@ -77,7 +77,7 @@ export default function ContactUs() {
       initial={{ opacity: 0, y: 20 }}
       animate={controls}
 
-      className="bg-white   flex flex-wrap justify-center lg:px-20  lg:py-10 gap-10 w-[100%]"
+      className="bg-white   flex flex-wrap justify-center lg:px-20  lg:py-10 p-5 gap-10 w-[100%]"
       id="contactme"
     >
       <div className="bg-white  lg:my-10 flex flex-wrap justify-center  rounded-md drop-shadow-2xl w-[90%] lg:w-[100%] lg:p-4">
