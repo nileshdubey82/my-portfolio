@@ -151,16 +151,16 @@ ref={ref}>
       <div className="flex flex-wrap gap-5 p-4 justify-center">
         {projects[activeTab].map((project, index) => (
           <div key={index}>
-          <div  className="relative">
+          <div  className="relative dark:bg-[#263238] bg-[#d6d2df] rounded-md">
             <img
               className="w-[400px] h-[250px] lg:object-cover object-contain rounded-lg cursor-pointer"
               src={project.image}
               alt={project.name}
             />
             
-            <div className="absolute top-0 left-0 right-0 bottom-0 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-gray-800 bg-opacity-75 text-white flex justify-center items-center flex-col">
+            <div className="absolute top-0 left-0 right-0 bottom-0 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-gray-800 bg-opacity-75 text-white flex justify-center items-center flex-col rounded-md">
               <div className="text-center">
-              
+                <p className="px-5">{project.description}</p>
               </div>
               <div className="flex mt-4">
                 <a
