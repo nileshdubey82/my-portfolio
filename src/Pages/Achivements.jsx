@@ -62,18 +62,20 @@ export default function Achivements() {
             <div className="flex  justify-center flex-wrap">
 
 
-                {Achive.map((i) => {
-                    return (<>
+                {Achive.map((i,index) => {
+                    return (
 
-                        <div className=" flex items-center flex-col relative bg-white mx-5 my-5 px-4 py-3 rounded-lg shadow-lg " style={{ width: '270px' }}>
+                        <div 
+                         key={i.id || index}
+                        className=" flex items-center flex-col relative bg-white mx-5 my-5 px-4 py-3 rounded-lg shadow-lg " style={{ width: '270px' }}>
                             <img src={`${i.image}`} />
                             <span className="text-[#5f0bb8] font-bold text-lg mb-3 text-center mt-4 ">{i.Name}</span>
-                            <p className="mt-1 text-gray-600 text-center">
+                            <div className="mt-1 text-gray-600 text-center">
                                 <p>Theme:<b> {i.Theme}</b></p>
                                 <p>Project: <b>{i.Project}</b></p>
-                            </p>
+                            </div>
                         </div>
-                    </>)
+                    )
 
                 })}
 

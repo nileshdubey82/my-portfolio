@@ -49,50 +49,50 @@ function AboutUs() {
 
     ,
     {
-      id: 5,
+      id: 4,
       Name: "HTML",
       Icon: <BsFiletypeHtml />
     }
     ,
     {
-      id: 6,
+      id: 5,
       Name: "CSS",
       Icon: <BsFiletypeCss />
     }
     ,
 
     {
-      id: 4,
+      id: 6,
       Name: "Tailwind / Bootstrap",
       Icon: <SiTailwindcss />
     },
     {
-      id: 6,
+      id: 7,
       Name: "Mysql",
       Icon: <SiMysql />
     }
     ,
     {
-      id: 7,
+      id: 8,
       Name: "Php",
       Icon: <BsFiletypePhp />
     }
     ,
     {
-      id: 8,
+      id: 9,
       Name: "Git & GitHub",
       Icon: <AiOutlineGithub />
     }
     ,
     {
-      id: 8,
+      id: 10,
       Name: "System Designing",
       Icon: <MdSettingsSystemDaydream />
     }
 
     ,
     {
-      id: 10,
+      id: 11,
       Name: "Basic Desktop Engineering",
       Icon: <BiDesktop />
     }
@@ -155,18 +155,22 @@ function AboutUs() {
         <motion.div className="flex py-5 gap-5 justify-center flex-wrap " initial={{ opacity: 0, y: 20 }}
           animate={controls}
           ref={ref}>
-          {Skills.map((i) => {
-            return (<>
-              <div className="bg-white lg:p-8 p-5 rounded-md gap-2 flex flex-col justify-center w-[135px] lg:w-[200px]">
-                <div
-                  className="flex justify-center text-[#5d0db3] text-5xl "
-                >
-                  {i.Icon}
-                </div>
-                <h1 className="font-bold text-center text-sm lg:text-[16px]">{i.Name}</h1>
-              </div>
-            </>)
-          })}
+          {Skills.map((i, index) => {
+  return (
+    <div
+      key={i.id || index}
+      className="bg-white lg:p-8 p-5 rounded-md gap-2 flex flex-col justify-center w-[135px] lg:w-[200px]"
+    >
+      <div className="flex justify-center text-[#5d0db3] text-5xl ">
+        {i.Icon}
+      </div>
+      <h1 className="font-bold text-center text-sm lg:text-[16px]">
+        {i.Name}
+      </h1>
+    </div>
+  );
+})}
+
 
 
 
