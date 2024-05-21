@@ -159,7 +159,7 @@ function AboutUs() {
           </div>
         </div>
 
-        <h1 className="text-4xl text-center mt-10 font-bold underline dark:text-white text-black">Skills</h1>
+        <h1 className="text-4xl text-center mt-10 font-bold  dark:text-white text-black">Skills</h1>
         <motion.div className="flex py-5 gap-5 justify-center flex-wrap " initial={{ opacity: 0, y: 20 }}
           animate={controls}
           ref={ref}>

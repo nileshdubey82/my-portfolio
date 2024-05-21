@@ -69,7 +69,7 @@ export default function Achivements() {
                          key={i.id || index}
                         className=" flex items-center flex-col relative bg-white dark:bg-[#FAFAFA] mx-5 my-5 px-4 py-3 rounded-lg shadow-lg " style={{ width: '270px' }}>
                             <img src={`${i.image}`} />
-                            <span className="text-[#5f0bb8] font-bold text-lg mb-3 text-center mt-4 ">{i.Name}</span>
+                            <span className="text-[#5f0bb8] font-bold text-lg mb-3 text-center mt-4 dark:text-black">{i.Name}</span>
                             <div className="mt-1 text-gray-600 text-center">
                                 <p>Theme:<b> {i.Theme}</b></p>
                                 <p>Project: <b>{i.Project}</b></p>

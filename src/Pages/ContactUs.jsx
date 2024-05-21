@@ -80,8 +80,8 @@ export default function ContactUs() {
       className="bg-white   dark:bg-[#26323800] flex flex-wrap justify-center lg:px-20  lg:py-10 p-5 gap-10 w-[100%]"
       id="contactme"
     >
-      <div className="bg-white dark:bg-[#263238] lg:my-10 flex flex-wrap justify-center  rounded-md drop-shadow-2xl w-[90%] lg:w-[100%] lg:p-4">
-        <div className="bg-[#530C9F] dark:bg-[#465b66] py-10 rounded-md lg:px-10  flex flex-col justify-between relative lg:w-[40%]">
+      <div className="bg-white dark:bg-[#263238] lg:my-10 flex flex-wrap justify-center  rounded-md drop-shadow-2xl w-[100%] lg:w-[100%] lg:p-4">
+        <div className="bg-[#530C9F] dark:bg-[#465b66] py-10 rounded-md lg:px-10  flex flex-col justify-between relative lg:w-[40%] flex-wrap">
           <img
             src="/Images/circlecon.png"
             className="absolute right-0 bottom-0 w-24 lg:w-36"
@@ -95,17 +95,17 @@ export default function ContactUs() {
             </p>
           </div>
 
-          <div className="text-white mt-10 lg:mt-0 px-4">
-            <p className="flex items-center gap-5 lg:text-xl text-md">
+          <div className="text-white mt-10 lg:mt-0 px-4 ">
+            <p className="flex items-center gap-5 lg:text-xl text-sm flex-wrap">
               <AiFillPhone /> :<a href="tel:916267751993">+91 6267751993</a>{" "}
             </p>
-            <p className="flex items-center gap-5 lg:text-xl text-md lg:mt-10">
+            <p className="flex items-center gap-5 lg:text-xl text-sm lg:mt-10 flex-wrap">
               <CgMail /> :{" "}
               <a href="mailto:nileshdubey060@gmail.com">
                 nileshdubey060@gmail.com
               </a>
             </p>
-            <p className="flex items-center gap-5 lg:text-xl text-md lg:mt-10">
+            <p className="flex items-center gap-5 lg:text-xl text-sm lg:mt-10 flex-wrap">
               <HiLocationMarker /> : <a> Bhilai Chhattishgarh.</a>
             </p>
           </div>
