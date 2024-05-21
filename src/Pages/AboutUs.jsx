@@ -124,7 +124,7 @@ function AboutUs() {
             </div>
             <div className="flex-1 items-center flex align-middle justify-center ">
               <div className="lg:px-10 mt-10 lg:mt-0 ">
-                <p className="text-justify text-[#4e4e4e] dark:text-[#fff]">
+                <p className="lg:text-justify  text-[#4e4e4e] dark:text-[#fff] text-[14px] lg:text-4xl">
                   Welcome to my portfolio page! I&apos;m a dedicated developer with
                   expertise in a range of technologies, including ReactJS,
                   ReactNative, HTML, CSS, Bootstrap, Tailwind CSS, JavaScript,
@@ -168,7 +168,7 @@ function AboutUs() {
               <div
                 key={i.id || index}
                 className="bg-white lg:p-8 p-5 rounded-md gap-2 flex flex-col justify-center w-[135px] lg:w-[200px] *:
-      bg-gradient-to-r  dark:from-[#263238]  dark:via-[#3b4e57]  dark:to-[#263238] hover:scale-[1.1] transition-all delay-100
+      bg-gradient-to-r  dark:from-[#263238]  dark:via-[#304047]  dark:to-[#263238] hover:scale-[1.1] transition-all delay-100
       
       "
               >
