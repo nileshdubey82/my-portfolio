@@ -1,12 +1,26 @@
-import React, { useState } from "react";
-
+import React, { useState ,useEffect} from "react";
+import { useInView } from 'react-intersection-observer';
+import { motion, useAnimation } from "framer-motion";
 export default function Portfolio() {
   const [activeTab, setActiveTab] = useState("reactjs");
 
   const handleTabClick = (tabName) => {
     setActiveTab(tabName);
   };
+  const controls = useAnimation();
+  const { ref, inView } = useInView();
 
+  useEffect(() => {
+    if (inView) {
+      controls.start({
+        opacity: 1,
+        y: 0,
+        transition: {
+          duration: 2,
+        },
+      });
+    }
+  }, [controls, inView]);
   const projects = {
     reactjs: [
       {
@@ -92,10 +106,13 @@ export default function Portfolio() {
     ],
   };
 
+
   return (
-    <section id="projects">
-      <h1 className="text-center text-3xl font-bold">Projects</h1>
-      <p className="text-center text-gray-500 mt-4">
+    <motion.section id="projects" initial={{ opacity: 0, y: 20 }}
+    animate={controls}
+ref={ref}>
+      <h1 className="text-center text-3xl font-bold dark:text-white text-black">Projects</h1>
+      <p className="text-center text-gray-500 mt-4 dark:text-white">
         I develop web & mobile apps with ReactJS, React Native, & WordPress,
         focusing on user experience & efficient functionality
       </p>
@@ -103,9 +120,9 @@ export default function Portfolio() {
         <div
           className={`px-4 py-2 cursor-pointer ${
             activeTab === "reactjs"
-              ? "bg-[#5f0bb8] text-white"
-              : "bg-gray-200 text-gray-800"
-          } rounded-md`}
+              ? "bg-[#5f0bb8] dark:bg-white dark:text-black text-white"
+              : "bg-gray-400 text-white"
+          } rounded-md text-[15px] lg:text-md`}
           onClick={() => handleTabClick("reactjs")}
         >
           ReactJS
@@ -113,9 +130,9 @@ export default function Portfolio() {
         <div
           className={`px-4 py-2 cursor-pointer ${
             activeTab === "reactnative"
-              ? "bg-[#5f0bb8] text-white"
-              : "bg-gray-200 text-gray-800"
-          } rounded-md`}
+            ? "bg-[#5f0bb8] dark:bg-white dark:text-black text-white"
+            : "bg-gray-400 text-white"
+          } rounded-md text-[15px] lg:text-md `}
           onClick={() => handleTabClick("reactnative")}
         >
           React Native
@@ -123,9 +140,9 @@ export default function Portfolio() {
         <div
           className={`px-4 py-2 cursor-pointer ${
             activeTab === "wordpress"
-              ? "bg-[#5f0bb8] text-white"
-              : "bg-gray-200 text-gray-800"
-          } rounded-md`}
+            ? "bg-[#5f0bb8] dark:bg-white dark:text-black text-white"
+            : "bg-gray-400 text-white"
+          } rounded-md text-[15px] lg:text-md`}
           onClick={() => handleTabClick("wordpress")}
         >
           Wordpress
@@ -133,41 +150,45 @@ export default function Portfolio() {
       </div>
       <div className="flex flex-wrap gap-5 p-4 justify-center">
         {projects[activeTab].map((project, index) => (
-          <div key={index} className="relative">
+          <div key={index}>
+          <div  className="relative dark:bg-[#263238] bg-[#d6d2df] rounded-md">
             <img
-              className="lg:w-[400px] h-[250px] lg:object-cover object-contain rounded-lg cursor-pointer"
+              className="w-[400px] h-[250px] lg:object-cover object-contain rounded-lg cursor-pointer"
               src={project.image}
               alt={project.name}
             />
-            <div className="absolute top-0 left-0 right-0 bottom-0 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-gray-800 bg-opacity-75 text-white flex justify-center items-center flex-col">
+            
+            <div className="absolute top-0 left-0 right-0 bottom-0 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-gray-800 bg-opacity-75 text-white flex justify-center items-center flex-col rounded-md">
               <div className="text-center">
-                <h2 className="text-lg font-semibold text-center">
-                  {project.name}
-                </h2>
-                <p className="text-sm text-center px-10">
-                  {project.description}
-                </p>
+                <p className="px-5">{project.description}</p>
               </div>
               <div className="flex mt-4">
                 <a
                   href={project.link}
-                  className="px-4 py-2 text-sm text-white cursor-pointer hover:text-white bg-[#5f0bb8] hover:bg-[#4c0898] transition-colors duration-300 rounded-md mr-2"
+                  className="px-4 py-2 text-sm text-white cursor-pointer hover:text-white bg-[#5f0bb8] hover:bg-[#4c0898] transition-colors duration-300 rounded-md mr-2 dark:bg-white dark:text-black dark:hover:bg-gray-300"
                   target="_blank"
                 >
                   View Project
                 </a>
                 <a
                   href={project.repo}
-                  className="px-4 py-2 text-sm text-white cursor-pointer hover:text-white bg-[#5f0bb8] hover:bg-[#4c0898] transition-colors duration-300 rounded-md"
+                  className="px-4 py-2 text-sm text-white cursor-pointer hover:text-white bg-[#5f0bb8] hover:bg-[#4c0898] transition-colors duration-300 rounded-md dark:bg-white dark:text-black dark:hover:bg-gray-300"
                   target="_blank"
                 >
                   GitHub Repo
                 </a>
               </div>
+              
             </div>
+            
+            </div>
+            <h2 className="text-lg font-semibold text-center dark:text-white text-black ">
+                  {project.name}
+                </h2>
           </div>
+          
         ))}
       </div>
-    </section>
+    </motion.section>
   );
 }

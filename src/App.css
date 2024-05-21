@@ -1,10 +1,56 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
-body{
+
+body {
     /* padding: 10px; */
     font-family: "Lato", sans-serif;
 }
-.custom-cursor {
-    /* cursor: url('../public/Images/cursor.png'), auto; */
-    
+
+
+@media (prefers-color-scheme: dark) {
+    .hireme{
+        background-color: white !important;
+    }
+
+    #contactme input, #contactme textarea{
+        background-color: white;
+        color: black;
+    }
+  }
+
+
+
+  .tawk-button {
+    background-color: red !important;
 }
+
+/* 
+@keyframes carouselAnim {
+    from {
+        transform: translate(0, 0);
+    }
+
+    to {
+        transform: translate(calc(-100% + (4*300px)));
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .container .carousel-items {
+        animation: carouselAnim 60s infinite alternate linear;
+    }
+
+    @keyframes carouselAnim {
+        from {
+            transform: translate(0, 0);
+        }
+
+        to {
+            transform: translate(calc(-100% + (1*300px)));
+        }
+    }
+}
+
+.carousel-focus:hover {
+    transition: all 0.8s;
+    transform: scale(1.1);
+} */
