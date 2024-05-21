@@ -31,12 +31,12 @@ function Services() {
                         text-4xl
                         font-bold
                         dark:text-white
-
+                        text-black
                 "
       >
         Services
       </h1>
-      <p className="text-center text-gray-400 mt-10 dark:text-white ">
+      <p className="text-center text-gray-400 mt-5 dark:text-white ">
         Full stack developer crafting responsive interfaces, robust backends,
         API integrations, and efficient deployments. Maintenance and support
         provided.
@@ -46,7 +46,7 @@ function Services() {
           <div className="flex justify-center text-7xl dark:text-[#ffffff] text-[#5f0bb8] group-hover:text-[#fff]">
             <CgWebsite />
           </div>
-          <h1 className="font-bold text-xl group-hover:text-[#fff]">Web Site Design</h1>
+          <h1 className="font-bold text-xl group-hover:text-[#fff] text-black dark:text-white">Web Site Design</h1>
           <p className="text-[#4d4d4d] dark:text-[#b8b6b6] dark:group-hover:text-[#dad8d8] transition-colors group-hover:text-[#fff]">
             Crafting visually stunning websites with user-centric design,
             intuitive navigation, and seamless functionality. Responsive,
@@ -59,7 +59,7 @@ function Services() {
             <BiMobileAlt />
           </div>
 
-          <h1 className="font-bold text-xl group-hover:text-[#fff]">App Design</h1>
+          <h1 className="font-bold text-xl group-hover:text-[#fff] text-black dark:text-white">App Design</h1>
           <p className="text-[#4d4d4d] dark:group-hover:text-[#dad8d8] transition-all delay-75 group-hover:text-[#fff] dark:text-[#b8b6b6]">
             Creating captivating apps with sleek interfaces, seamless
             navigation, and optimized performance for a superior user
@@ -70,7 +70,7 @@ function Services() {
           <div className="flex justify-center text-7xl dark:text-[#ffffff] text-[#5f0bb8] group-hover:text-[#fff]">
             <SiRobotframework />
           </div>
-          <h1 className="font-bold text-xl group-hover:text-[#fff]">Wireframe Design</h1>
+          <h1 className="font-bold text-xl group-hover:text-[#fff] text-black dark:text-white">Wireframe Design</h1>
           <p className="text-[#4d4d4d] dark:group-hover:text-[#dad8d8] transition-all delay-75 group-hover:text-[#fff] dark:text-[#b8b6b6]">
             Crafting wireframe designs that serve as blueprints for intuitive
             user interfaces, ensuring seamless navigation and optimal user

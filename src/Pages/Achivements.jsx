@@ -58,7 +58,7 @@ export default function Achivements() {
     ref={ref} className="container mx-auto w-full overflow-hidden relative p-5 mt-4">
           
 
-            <h1 className='text-center text-4xl font-bold dark:text-white'>Achivements</h1>
+            <h1 className='text-center text-4xl font-bold dark:text-white text-black'>Achivements</h1>
             <div className="flex  justify-center flex-wrap">
 
 
