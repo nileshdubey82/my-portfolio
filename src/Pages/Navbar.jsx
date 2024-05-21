@@ -87,7 +87,7 @@ function Navigation() {
         <div className="navbar-end">
           <a
             className="btn btn-md text-[#5F0BB8] font-bold hireme"
-            href="mailto:nileshdubey060@gmail.com?subject=Congratulations%20you%20are%20Selected%20in%20to%20this%20company"
+            href="mailto:nileshdubey060@gmail.com"
             target="_blank"
 
           >

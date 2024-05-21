@@ -22,7 +22,7 @@ body {
         background-color: white;
     }
 }
-
+/* 
 @keyframes carouselAnim {
     from {
         transform: translate(0, 0);
@@ -44,7 +44,7 @@ body {
         }
 
         to {
-            transform: translate(calc(-100% + (5*300px)));
+            transform: translate(calc(-100% + (1*300px)));
         }
     }
 }
@@ -52,4 +52,4 @@ body {
 .carousel-focus:hover {
     transition: all 0.8s;
     transform: scale(1.1);
-}
+} */

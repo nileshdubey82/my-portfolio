@@ -1,3 +1,7 @@
+import { BiDesktop } from "react-icons/bi"; 
+import { MdSettingsSystemDaydream } from "react-icons/md"; 
+import { IoLogoJavascript } from "react-icons/io"; 
+import { AiOutlineGithub } from "react-icons/ai"; 
 import { BsFiletypePhp } from "react-icons/bs";
 import { SiMysql } from "react-icons/si";
 import { BsFiletypeHtml } from "react-icons/bs";
@@ -38,32 +42,56 @@ function AboutUs() {
     ,
     {
       id: 3,
-      Name: "NextJs",
-      Icon: <TbBrandNextjs />
+      Name: "JavaScript",
+      Icon: <IoLogoJavascript />
     }
     ,
     {
       id: 4,
-      Name: "Tailwind/Bootstrap",
+      Name: "Tailwind / Bootstrap",
       Icon: <SiTailwindcss />
     }
     ,
     {
       id: 5,
-      Name: "Git & GitHub",
+      Name: "HTML",
       Icon: <BsFiletypeHtml />
     }
     ,
     {
-      id: 5,
+      id: 6,
       Name: "Mysql",
       Icon: <SiMysql />
     }
     ,
     {
-      id: 5,
+      id: 7,
       Name: "Php",
       Icon: <BsFiletypePhp />
+    }
+    ,
+    {
+      id: 8,
+      Name: "Git & GitHub",
+      Icon: <AiOutlineGithub />
+    }
+    ,
+    {
+      id: 8,
+      Name: "System Design",
+      Icon: <MdSettingsSystemDaydream />
+    }
+    ,
+    {
+      id: 9,
+      Name: "System Design",
+      Icon: <MdSettingsSystemDaydream />
+    }
+    ,
+    {
+      id: 10,
+      Name: "Basic Desktop Engineering",
+      Icon: <BiDesktop />
     }
   ]
 
@@ -120,18 +148,18 @@ function AboutUs() {
         </div>
 
         <h1 className="text-4xl text-center mt-10 font-bold underline">Skills</h1>
-        <motion.div className="flex py-5 gap-9 justify-center flex-wrap " initial={{ opacity: 0, y: 20 }}
+        <motion.div className="flex py-5 gap-5 justify-center flex-wrap " initial={{ opacity: 0, y: 20 }}
       animate={controls}
       ref={ref}>
           {Skills.map((i) => {
             return (<>
-              <div className="bg-white lg:p-8 p-5 rounded-md gap-2 flex flex-col justify-center w-[200px]">
+              <div className="bg-white lg:p-8 p-5 rounded-md gap-2 flex flex-col justify-center w-[135px] lg:w-[200px]">
                 <div
                   className="flex justify-center text-[#5d0db3] text-5xl "
                 >
                   {i.Icon}
                 </div>
-                <h1 className="font-bold text-center">{i.Name}</h1>
+                <h1 className="font-bold text-center text-sm lg:text-[16px]">{i.Name}</h1>
               </div>
             </>)
           })}
