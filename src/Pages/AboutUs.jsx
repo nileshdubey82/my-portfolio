@@ -124,7 +124,7 @@ function AboutUs() {
             </div>
             <div className="flex-1 items-center flex align-middle justify-center ">
               <div className="lg:px-10 mt-10 lg:mt-0 ">
-                <p className="lg:text-justify  text-[#4e4e4e] dark:text-[#fff] text-[14px] lg:text-4xl">
+                <p className="lg:text-justify  text-[#4e4e4e] dark:text-[#fff] text-[14px] lg:text-lg">
                   Welcome to my portfolio page! I&apos;m a dedicated developer with
                   expertise in a range of technologies, including ReactJS,
                   ReactNative, HTML, CSS, Bootstrap, Tailwind CSS, JavaScript,

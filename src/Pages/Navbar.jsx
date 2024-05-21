@@ -30,12 +30,12 @@ function Navigation() {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 dark:bg-[#263238]"
             >
               <li>
-                <Link to={"/"} className="">
+                <a href="/" className="">
                   Home
-                </Link>
+                </a>
               </li>
               <li>
                 <a href="/#aboutme" className="">
@@ -59,9 +59,9 @@ function Navigation() {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 ">
             <li>
-              <Link to={"/"} className="text-[#fff] dark:text-[#CFD8DC] text-xl focus:text-white ">
+              <a href="/" className="text-[#fff] dark:text-[#CFD8DC] text-xl focus:text-white ">
                 Home
-              </Link>
+              </a>
             </li>
             <li>
               <a
