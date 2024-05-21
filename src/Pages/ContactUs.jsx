@@ -56,14 +56,6 @@ export default function ContactUs() {
   };
 
   return (
-<<<<<<< HEAD
-    <section className='bg-[#F5F2F9] p-5 my-10' id='contactme'>
-      <div className="max-w-md mx-auto mt-10 bg-[#F5F2F9]">
-        <h2 className="text-3xl font-bold mb-4 text-center">Contact Me</h2>
-        <p className="mb-6 text-center">Please fill out the form below to get in touch with me.</p>
-        <form onSubmit={sendEmail} className="space-y-6">  
-          {/* Personal Information Section */}
-=======
     <motion.section
     initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
@@ -77,7 +69,6 @@ export default function ContactUs() {
             src="/Images/circlecon.png"
             className="absolute right-0 bottom-0 w-24 lg:w-36"
           />
->>>>>>> faf897bac00ba6d2e163ebe341016d09a63f0188
           <div>
             <h1 className="text-left text-white lg:text-4xl text-2xl font-bold">
               Contact Information

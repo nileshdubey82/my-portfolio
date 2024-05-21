@@ -11,16 +11,12 @@ import './App.css';
 function App() {
   return (
     <>
-<<<<<<< HEAD
-    <div className='p-5 custom-cursor'>
-=======
     <motion.div className='p-5 '
     
     initial={{ opacity: 0, y: -100 }} // Initial animation state
       animate={{ opacity: 1, y: 0 }} // Animation state to animate to
       transition={{ duration: 1 }} // Animation duration
     >
->>>>>>> faf897bac00ba6d2e163ebe341016d09a63f0188
       <Router>
         <Navigation />
         <TawkToChat/>
