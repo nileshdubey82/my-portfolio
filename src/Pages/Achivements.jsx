@@ -58,7 +58,7 @@ export default function Achivements() {
     ref={ref} className="container mx-auto w-full overflow-hidden relative p-5 mt-4">
           
 
-            <h1 className='text-center text-4xl font-bold'>Achivements</h1>
+            <h1 className='text-center text-4xl font-bold dark:text-white'>Achivements</h1>
             <div className="flex  justify-center flex-wrap">
 
 
@@ -67,7 +67,7 @@ export default function Achivements() {
 
                         <div 
                          key={i.id || index}
-                        className=" flex items-center flex-col relative bg-white mx-5 my-5 px-4 py-3 rounded-lg shadow-lg " style={{ width: '270px' }}>
+                        className=" flex items-center flex-col relative bg-white dark:bg-[#FAFAFA] mx-5 my-5 px-4 py-3 rounded-lg shadow-lg " style={{ width: '270px' }}>
                             <img src={`${i.image}`} />
                             <span className="text-[#5f0bb8] font-bold text-lg mb-3 text-center mt-4 ">{i.Name}</span>
                             <div className="mt-1 text-gray-600 text-center">

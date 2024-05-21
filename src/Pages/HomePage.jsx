@@ -33,7 +33,7 @@ export default function HomePage() {
           <span> Full Stack Developer</span>
 
         </span>
-        <span
+        <span 
 
           className="bg-gradient-to-r from-[#5f0bb871] dark:from-[#26323865]  to-[#5f0bb870] dark:to-[#475e6971] w-[80px] h-[60px] absolute lg:left-[200px] lg:w-[167px] lg:bottom-20 left-[50px] bottom-[250px] z-10 rounded-lg text-center flex justify-center align-middle items-center text-[#ffffff7e] font-bold text-[12px] rotate-[-14deg] lg:h-[150px] lg:text-2xl border"
         >

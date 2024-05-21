@@ -106,12 +106,13 @@ export default function Portfolio() {
     ],
   };
 
+
   return (
     <motion.section id="projects" initial={{ opacity: 0, y: 20 }}
     animate={controls}
 ref={ref}>
-      <h1 className="text-center text-3xl font-bold">Projects</h1>
-      <p className="text-center text-gray-500 mt-4">
+      <h1 className="text-center text-3xl font-bold dark:text-white">Projects</h1>
+      <p className="text-center text-gray-500 mt-4 dark:text-white">
         I develop web & mobile apps with ReactJS, React Native, & WordPress,
         focusing on user experience & efficient functionality
       </p>
@@ -149,20 +150,17 @@ ref={ref}>
       </div>
       <div className="flex flex-wrap gap-5 p-4 justify-center">
         {projects[activeTab].map((project, index) => (
-          <div key={index} className="relative">
+          <div key={index}>
+          <div  className="relative">
             <img
               className="w-[400px] h-[250px] lg:object-cover object-contain rounded-lg cursor-pointer"
               src={project.image}
               alt={project.name}
             />
+            
             <div className="absolute top-0 left-0 right-0 bottom-0 opacity-0 hover:opacity-100 transition-opacity duration-300 bg-gray-800 bg-opacity-75 text-white flex justify-center items-center flex-col">
               <div className="text-center">
-                <h2 className="text-lg font-semibold text-center">
-                  {project.name}
-                </h2>
-                <p className="text-sm text-center px-10">
-                  {project.description}
-                </p>
+              
               </div>
               <div className="flex mt-4">
                 <a
@@ -180,8 +178,15 @@ ref={ref}>
                   GitHub Repo
                 </a>
               </div>
+              
             </div>
+            
+            </div>
+            <h2 className="text-lg font-semibold text-center text-white">
+                  {project.name}
+                </h2>
           </div>
+          
         ))}
       </div>
     </motion.section>

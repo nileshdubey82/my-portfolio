@@ -14,7 +14,9 @@ import { BiCloudDownload } from "react-icons/bi";
 import { useInView } from 'react-intersection-observer';
 import { motion, useAnimation } from "framer-motion";
 import { useEffect } from "react";
+import { useSelector } from "react-redux";
 function AboutUs() {
+  const theme = useSelector((state) => { return state.ThemeSlice });
   const controls = useAnimation();
   const { ref, inView } = useInView();
 
@@ -102,21 +104,27 @@ function AboutUs() {
     <motion.section id="aboutme" className="lg:py-10 sm:0-5 py-10" initial={{ opacity: 0, y: 20 }}
       animate={controls}
       ref={ref}>
-      <div className="bg-[#f9f8fb] p-3 lg:p-5 rounded-xl">
-        <div className="bg-white rounded-xl p-5 ">
-          <h1 className="text-black text-4xl text-center">About Me</h1>
-          <p className="text-center mt-3">
+      <div className="bg-[#f9f8fb] p-3 lg:p-5 rounded-xl dark:bg-[#212121]">
+        <div className="bg-white rounded-xl p-5 dark:bg-[#263238]">
+          <h1 className="text-black text-4xl text-center dark:text-[#fff]">About Me</h1>
+          <p className="text-center mt-3 dark:text-[#fff]">
             Tech-savvy individual with a passion for innovation, a knack for
             problem-solving, and a love for creative expression through design.
           </p>
           <div className="lg:flex mt-10 flex-wrap">
             <div className="flex-1 flex justify-center p-2">
               {" "}
-              <img src="/Images/about-pick.png" className="image-full" />
+              <img src={
+                theme ? '/Images/profilepick-done1.png' : "/Images/about-pick.png"
+              }
+
+
+
+                className="image-full " />
             </div>
             <div className="flex-1 items-center flex align-middle justify-center ">
               <div className="lg:px-10 mt-10 lg:mt-0 ">
-                <p className="text-justify text-[#4e4e4e]">
+                <p className="text-justify text-[#4e4e4e] dark:text-[#fff]">
                   Welcome to my portfolio page! I&apos;m a dedicated developer with
                   expertise in a range of technologies, including ReactJS,
                   ReactNative, HTML, CSS, Bootstrap, Tailwind CSS, JavaScript,
@@ -137,7 +145,7 @@ function AboutUs() {
 
                 </p>
                 <a
-                  className="btn btn-md my-4 hover:bg-[#5D0DB3] hover:scale-[1.1] sm:btn-sm md:btn-md lg:btn-lg text-xl bg-[#5D0DB3] text-white"
+                  className="btn btn-md my-4 hover:bg-[#5D0DB3] dark:bg-white dark:text-[black] hover:scale-[1.1] sm:btn-sm md:btn-md lg:btn-lg text-xl bg-[#5D0DB3] text-white"
                   href="/Images/nilesh_Resume_final.pdf"
                   target="_blank"
                   download
@@ -151,25 +159,28 @@ function AboutUs() {
           </div>
         </div>
 
-        <h1 className="text-4xl text-center mt-10 font-bold underline">Skills</h1>
+        <h1 className="text-4xl text-center mt-10 font-bold underline dark:text-white">Skills</h1>
         <motion.div className="flex py-5 gap-5 justify-center flex-wrap " initial={{ opacity: 0, y: 20 }}
           animate={controls}
           ref={ref}>
           {Skills.map((i, index) => {
-  return (
-    <div
-      key={i.id || index}
-      className="bg-white lg:p-8 p-5 rounded-md gap-2 flex flex-col justify-center w-[135px] lg:w-[200px]"
-    >
-      <div className="flex justify-center text-[#5d0db3] text-5xl ">
-        {i.Icon}
-      </div>
-      <h1 className="font-bold text-center text-sm lg:text-[16px]">
-        {i.Name}
-      </h1>
-    </div>
-  );
-})}
+            return (
+              <div
+                key={i.id || index}
+                className="bg-white lg:p-8 p-5 rounded-md gap-2 flex flex-col justify-center w-[135px] lg:w-[200px] *:
+      bg-gradient-to-r  dark:from-[#263238]  dark:via-[#3b4e57]  dark:to-[#263238] hover:scale-[1.1] transition-all delay-100
+      
+      "
+              >
+                <div className="flex justify-center text-[#5d0db3] text-5xl dark:text-white">
+                  {i.Icon}
+                </div>
+                <h1 className="font-bold text-center text-sm lg:text-[16px] dark:text-white">
+                  {i.Name}
+                </h1>
+              </div>
+            );
+          })}
 
 
 
