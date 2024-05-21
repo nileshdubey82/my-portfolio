@@ -1,10 +1,15 @@
+import { MdDarkMode } from "react-icons/md";
+import { CiLight } from "react-icons/ci";
 import React from "react";
 import { Link } from "react-router-dom";
-
+import { useSelector, useDispatch } from "react-redux";
+import { changeTheme } from "../Redux/Slices/ThemeSlice";
 function Navigation() {
+  const theme = useSelector((state) => { return state.ThemeSlice });
+  const dispatch = useDispatch();
   return (
     <div className=" sm:p-0 sticky top-0 z-10">
-      <div className="navbar bg-[#5F0BB8] p-4 rounded-xl">
+      <div className="navbar bg-[#5F0BB8] dark:bg-[#263238] p-4 rounded-xl dark:text-[#CFD8DC]">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -52,16 +57,16 @@ function Navigation() {
           <a className="btn btn-ghost text-xl text-[#FFD700]">NILESH</a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">
+          <ul className="menu menu-horizontal px-1 ">
             <li>
-              <Link to={"/"} className="text-[#fff] text-xl focus:text-white ">
+              <Link to={"/"} className="text-[#fff] dark:text-[#CFD8DC] text-xl focus:text-white ">
                 Home
               </Link>
             </li>
             <li>
               <a
                 href="/#aboutme"
-                className="text-[#B4B4B4] text-xl focus:text-white"
+                className="text-[#B4B4B4] text-xl focus:text-white dark:text-[#CFD8DC]"
               >
                 About Me
               </a>
@@ -69,7 +74,7 @@ function Navigation() {
             <li>
               <a
                 href="/#contactme"
-                className="text-[#B4B4B4] text-xl focus:text-white"
+                className="text-[#B4B4B4] text-xl focus:text-white dark:text-[#CFD8DC]"
               >
                 Contact Me
               </a>
@@ -77,16 +82,25 @@ function Navigation() {
             <li>
               <a
                 href="/#projects"
-                className="text-[#B4B4B4] text-xl focus:text-white"
+                className="text-[#B4B4B4] text-xl focus:text-white dark:text-[#CFD8DC]"
               >
                 Projects
               </a>
             </li>
           </ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end flex gap-2">
+          <button className="text-4xl text-white dark:text-[#CFD8DC]"
+            onClick={() => {
+              dispatch(changeTheme())
+            }
+            }
+
+          >
+            {theme ? <><CiLight /></> : <><MdDarkMode /></>}
+          </button>
           <a
-            className="btn btn-md text-[#5F0BB8] font-bold hireme"
+            className="btn btn-md text-[#5F0BB8] font-bold hireme dark:text-[#000000] "
             href="mailto:nileshdubey060@gmail.com"
             target="_blank"
 

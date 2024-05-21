@@ -15,7 +15,7 @@ export default function HomePage() {
     <>
       <section
         id="hero-section"
-        className="bg-gradient-to-r from-[#5f0bb8] via-purple-500 to-[#5f0bb8] flex flex-cols justify-center lg:bg-cover  bg-no-repeat lg:h-[700px] lg:bg-top bg-cover  bg-top lg:p-20 p-5 h-[500px] relative rounded-xl mt-8 drop-shadow-md"
+        className="bg-gradient-to-r from-[#5f0bb8] dark:from-[#263238] via-purple-500 dark:via-[#7497a8] to-[#5f0bb8] dark:to-[#263238] flex flex-cols justify-center lg:bg-cover  bg-no-repeat lg:h-[700px] lg:bg-top bg-cover  bg-top lg:p-20 p-5 h-[500px] relative rounded-xl mt-8 drop-shadow-md"
       >
         <img
           src="/Images/bubble1.png"
@@ -25,14 +25,23 @@ export default function HomePage() {
           src="/Images/bubble1.png"
           className="absolute  w-[50px] lg:left-[10px] lg:w-[167px] lg:bottom-0  left-[30px] bottom-[200px]"
         />
-        <img
-          src="/Images/full-stack.png"
-          className="  w-[50px] absolute lg:right-[300px] lg:w-[167px]  lg:top-60 right-[50px] top-[100px] z-10"
-        />
-        <img
-          src="/Images/2exp.png"
-          className="  w-[50px] absolute lg:left-[200px] lg:w-[167px] lg:bottom-20 left-[50px] bottom-[250px] z-10"
-        />
+        <span
+
+          className="bg-gradient-to-r from-[#5f0bb871] dark:from-[#26323865]  to-[#5f0bb870] dark:to-[#475e6971] w-[80px] h-[60px] absolute lg:right-[300px] lg:w-[167px]  lg:top-60 right-[50px] top-[100px] z-10 rounded-lg text-center flex justify-center align-middle items-center text-[#ffffff7e] font-bold text-sm rotate-[33deg] lg:h-[150px] lg:text-3xl border"
+        >
+
+          <span> Full Stack Developer</span>
+
+        </span>
+        <span
+
+          className="bg-gradient-to-r from-[#5f0bb871] dark:from-[#26323865]  to-[#5f0bb870] dark:to-[#475e6971] w-[80px] h-[60px] absolute lg:left-[200px] lg:w-[167px] lg:bottom-20 left-[50px] bottom-[250px] z-10 rounded-lg text-center flex justify-center align-middle items-center text-[#ffffff7e] font-bold text-[12px] rotate-[-14deg] lg:h-[150px] lg:text-2xl border"
+        >
+
+          <span> +2 Years Experiences</span>
+
+        </span>
+
         <img
           src="/Images/profilepick-done1.png"
           className="   absolute lg:left-auto  lg:bottom-0 left-auto bottom-0 z-10 w-72 lg:w-96"
@@ -76,9 +85,9 @@ export default function HomePage() {
       {/* For About Me */}
       <AboutUs />
       {/* For Projects */}
-      <Projects/>
-        {/* For achivements */}
-        <Achivements/>
+      <Projects />
+      {/* For achivements */}
+      <Achivements />
 
 
       {/* Contact Us */}
