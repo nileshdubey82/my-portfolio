@@ -77,17 +77,17 @@ export default function ContactUs() {
       initial={{ opacity: 0, y: 20 }}
       animate={controls}
 
-      className="bg-white   flex flex-wrap justify-center lg:px-20  lg:py-10 p-5 gap-10 w-[100%]"
+      className="bg-white   dark:bg-[#26323800] flex flex-wrap justify-center lg:px-20  lg:py-10 p-5 gap-10 w-[100%]"
       id="contactme"
     >
-      <div className="bg-white  lg:my-10 flex flex-wrap justify-center  rounded-md drop-shadow-2xl w-[90%] lg:w-[100%] lg:p-4">
-        <div className="bg-[#530C9F] py-10 rounded-md lg:px-10  flex flex-col justify-between relative lg:w-[40%]">
+      <div className="bg-white dark:bg-[#263238] lg:my-10 flex flex-wrap justify-center  rounded-md drop-shadow-2xl w-[90%] lg:w-[100%] lg:p-4">
+        <div className="bg-[#530C9F] dark:bg-[#465b66] py-10 rounded-md lg:px-10  flex flex-col justify-between relative lg:w-[40%]">
           <img
             src="/Images/circlecon.png"
             className="absolute right-0 bottom-0 w-24 lg:w-36"
           />
           <div>
-            <h1 className="text-left text-white lg:text-4xl text-2xl font-bold px-4">
+            <h1 className="text-left text-white  lg:text-4xl text-2xl font-bold px-4">
               Contact Information
             </h1>
             <p className="text-left text-white px-4">
@@ -137,13 +137,13 @@ export default function ContactUs() {
           </div>
         </div>
         <div className="p-5 lg:w-[60%] lg:h-[647px] relative py-10 w-[100%]">
-          <form onSubmit={sendEmail} className="space-y-6">
+          <form onSubmit={sendEmail} className="space-y-6 ">
             {/* Personal Information Section */}
             <div>
               {/* <h3 className="text-lg font-semibold mb-2">Personal Information</h3> */}
               <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
                 <div>
-                  <label htmlFor="name" className="block font-semibold">
+                  <label htmlFor="name" className="block font-semibold dark:text-white">
                     Name
                   </label>
                   <input
@@ -156,7 +156,7 @@ export default function ContactUs() {
                   />
                 </div>
                 <div>
-                <label htmlFor="phone" className="block font-semibold">
+                <label htmlFor="phone" className="block font-semibold dark:text-white">
                   Contact Number
                 </label>
                   <input
@@ -175,7 +175,7 @@ export default function ContactUs() {
               {/* <h3 className="text-lg font-semibold mb-2">Contact Information</h3> */}
               <div>
                
-                <label htmlFor="email" className="block font-semibold">
+                <label htmlFor="email" className="block font-semibold dark:text-white">
                     Email
                   </label>
                   <input
@@ -192,7 +192,7 @@ export default function ContactUs() {
             <div>
               {/* <h3 className="text-lg font-semibold mb-2">Inquiry</h3> */}
               <div>
-                <label htmlFor="message" className="block font-semibold">
+                <label htmlFor="message" className="block font-semibold dark:text-white">
                   Message
                 </label>
                 <textarea
@@ -209,7 +209,7 @@ export default function ContactUs() {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="bg-[#5f0bb8] text-white font-semibold py-2 px-4 rounded-md hover:bg-[#5f0bb860] focus:outline-none focus:bg-[#5f0bb860]"
+                className="bg-[#5f0bb8] dark:bg-white dark:text-black text-white font-semibold py-2 px-4 rounded-md hover:bg-[#5f0bb860] focus:outline-none focus:bg-[#5f0bb860]"
               >
                 Send Message
               </button>
