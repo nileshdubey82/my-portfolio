@@ -13,7 +13,7 @@ function App() {
   return (
     <div className={`${theme ? 'dark' : ''}`}>
       <div>
-        <motion.div className={`p-5 dark:bg-[#212121]`}
+        <motion.div className={`p-5 dark:bg-[#212121] bg-white`}
 
           initial={{ opacity: 0, y: -100 }} // Initial animation state
           animate={{ opacity: 1, y: 0 }} // Animation state to animate to
