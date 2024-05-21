@@ -6,6 +6,23 @@ body {
 }
 
 
+@media (prefers-color-scheme: dark) {
+    .hireme{
+        background-color: white !important;
+    }
+
+    #contactme input, #contactme textarea{
+        background-color: white;
+        color: black;
+    }
+  }
+
+  .tawk-button {
+    
+    background-color: red !important;
+    
+}
+
 /* 
 @keyframes carouselAnim {
     from {
