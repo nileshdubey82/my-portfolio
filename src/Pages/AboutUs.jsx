@@ -1,7 +1,8 @@
-import { BiDesktop } from "react-icons/bi"; 
-import { MdSettingsSystemDaydream } from "react-icons/md"; 
-import { IoLogoJavascript } from "react-icons/io"; 
-import { AiOutlineGithub } from "react-icons/ai"; 
+import { BsFiletypeCss } from "react-icons/bs";
+import { BiDesktop } from "react-icons/bi";
+import { MdSettingsSystemDaydream } from "react-icons/md";
+import { IoLogoJavascript } from "react-icons/io";
+import { AiOutlineGithub } from "react-icons/ai";
 import { BsFiletypePhp } from "react-icons/bs";
 import { SiMysql } from "react-icons/si";
 import { BsFiletypeHtml } from "react-icons/bs";
@@ -45,12 +46,7 @@ function AboutUs() {
       Name: "JavaScript",
       Icon: <IoLogoJavascript />
     }
-    ,
-    {
-      id: 4,
-      Name: "Tailwind / Bootstrap",
-      Icon: <SiTailwindcss />
-    }
+
     ,
     {
       id: 5,
@@ -58,6 +54,18 @@ function AboutUs() {
       Icon: <BsFiletypeHtml />
     }
     ,
+    {
+      id: 6,
+      Name: "CSS",
+      Icon: <BsFiletypeCss />
+    }
+    ,
+
+    {
+      id: 4,
+      Name: "Tailwind / Bootstrap",
+      Icon: <SiTailwindcss />
+    },
     {
       id: 6,
       Name: "Mysql",
@@ -78,15 +86,10 @@ function AboutUs() {
     ,
     {
       id: 8,
-      Name: "System Design",
+      Name: "System Designing",
       Icon: <MdSettingsSystemDaydream />
     }
-    ,
-    {
-      id: 9,
-      Name: "System Design",
-      Icon: <MdSettingsSystemDaydream />
-    }
+
     ,
     {
       id: 10,
@@ -113,24 +116,25 @@ function AboutUs() {
             </div>
             <div className="flex-1 items-center flex align-middle justify-center ">
               <div className="lg:px-10 mt-10 lg:mt-0 ">
-                <p className="text-justify text-[#959595]">
-                  Welcome to my portfolio page! I'm a dedicated developer with
+                <p className="text-justify text-[#4e4e4e]">
+                  Welcome to my portfolio page! I&apos;m a dedicated developer with
                   expertise in a range of technologies, including ReactJS,
                   ReactNative, HTML, CSS, Bootstrap, Tailwind CSS, JavaScript,
                   MySQL, PHP, Git, and GitHub. My journey in the tech world has
                   equipped me with a deep understanding of frontend and backend
-                  development. While ReactJS and ReactNative are my forte, I'm
+                  development. While ReactJS and ReactNative are my forte, I&apos;m
                   also adept at crafting responsive and visually appealing web
                   interfaces with HTML, CSS, and modern CSS frameworks like
-                  Bootstrap and Tailwind CSS. I'm well-versed in JavaScript for
+                  Bootstrap and Tailwind CSS. I&apos;m well-versed in JavaScript for
                   dynamic client-side scripting and have a solid grasp of
-                  database management with MySQL and MongoDB. Proficient in
+                  database management with MySQL. Proficient in
                   version control with Git and collaborative coding on GitHub, I
-                  ensure smooth project workflows. While I'm continuously
+                  ensure smooth project workflows. While I&apos;m continuously
                   expanding my skill set, I also have a foundational
-                  understanding of Node.js, Next.js, TypeScript, and PHP. Let's
+                  understanding of Node.js, Next.js, TypeScript, MongoDB,and PHP. Let&apos;s
                   collaborate and bring your ideas to life with cutting-edge
                   technology and seamless user experiences!
+
                 </p>
                 <a
                   className="btn btn-md my-4 hover:bg-[#5D0DB3] hover:scale-[1.1] sm:btn-sm md:btn-md lg:btn-lg text-xl bg-[#5D0DB3] text-white"
@@ -149,8 +153,8 @@ function AboutUs() {
 
         <h1 className="text-4xl text-center mt-10 font-bold underline">Skills</h1>
         <motion.div className="flex py-5 gap-5 justify-center flex-wrap " initial={{ opacity: 0, y: 20 }}
-      animate={controls}
-      ref={ref}>
+          animate={controls}
+          ref={ref}>
           {Skills.map((i) => {
             return (<>
               <div className="bg-white lg:p-8 p-5 rounded-md gap-2 flex flex-col justify-center w-[135px] lg:w-[200px]">
