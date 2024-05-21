@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 export const ThemeSlice = createSlice({
-    initialState: true,
+    initialState: false,
     name: 'ThemeSlice',
     reducers: {
         changeTheme: (state) => { return !state }
