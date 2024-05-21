@@ -106,7 +106,7 @@ function AboutUs() {
       ref={ref}>
       <div className="bg-[#f9f8fb] p-3 lg:p-5 rounded-xl dark:bg-[#212121]">
         <div className="bg-white rounded-xl p-5 dark:bg-[#263238]">
-          <h1 className="text-black text-4xl text-center dark:text-[#fff]">About Me</h1>
+          <h1 className="text-black text-4xl text-center dark:text-[#fff] ">About Me</h1>
           <p className="text-center mt-3 dark:text-[#fff]">
             Tech-savvy individual with a passion for innovation, a knack for
             problem-solving, and a love for creative expression through design.
@@ -159,7 +159,7 @@ function AboutUs() {
           </div>
         </div>
 
-        <h1 className="text-4xl text-center mt-10 font-bold underline dark:text-white">Skills</h1>
+        <h1 className="text-4xl text-center mt-10 font-bold underline dark:text-white text-black">Skills</h1>
         <motion.div className="flex py-5 gap-5 justify-center flex-wrap " initial={{ opacity: 0, y: 20 }}
           animate={controls}
           ref={ref}>
@@ -175,7 +175,7 @@ function AboutUs() {
                 <div className="flex justify-center text-[#5d0db3] text-5xl dark:text-white">
                   {i.Icon}
                 </div>
-                <h1 className="font-bold text-center text-sm lg:text-[16px] dark:text-white">
+                <h1 className="font-bold text-center text-sm lg:text-[16px] dark:text-white text-black">
                   {i.Name}
                 </h1>
               </div>

@@ -111,7 +111,7 @@ export default function Portfolio() {
     <motion.section id="projects" initial={{ opacity: 0, y: 20 }}
     animate={controls}
 ref={ref}>
-      <h1 className="text-center text-3xl font-bold dark:text-white">Projects</h1>
+      <h1 className="text-center text-3xl font-bold dark:text-white text-black">Projects</h1>
       <p className="text-center text-gray-500 mt-4 dark:text-white">
         I develop web & mobile apps with ReactJS, React Native, & WordPress,
         focusing on user experience & efficient functionality
@@ -120,8 +120,8 @@ ref={ref}>
         <div
           className={`px-4 py-2 cursor-pointer ${
             activeTab === "reactjs"
-              ? "bg-[#5f0bb8] text-white"
-              : "bg-gray-200 text-gray-800"
+              ? "bg-[#5f0bb8] dark:bg-white dark:text-black text-white"
+              : "bg-gray-400 text-white"
           } rounded-md text-[15px] lg:text-md`}
           onClick={() => handleTabClick("reactjs")}
         >
@@ -130,8 +130,8 @@ ref={ref}>
         <div
           className={`px-4 py-2 cursor-pointer ${
             activeTab === "reactnative"
-              ? "bg-[#5f0bb8] text-white"
-              : "bg-gray-200 text-gray-800"
+            ? "bg-[#5f0bb8] dark:bg-white dark:text-black text-white"
+            : "bg-gray-400 text-white"
           } rounded-md text-[15px] lg:text-md `}
           onClick={() => handleTabClick("reactnative")}
         >
@@ -140,8 +140,8 @@ ref={ref}>
         <div
           className={`px-4 py-2 cursor-pointer ${
             activeTab === "wordpress"
-              ? "bg-[#5f0bb8] text-white"
-              : "bg-gray-200 text-gray-800"
+            ? "bg-[#5f0bb8] dark:bg-white dark:text-black text-white"
+            : "bg-gray-400 text-white"
           } rounded-md text-[15px] lg:text-md`}
           onClick={() => handleTabClick("wordpress")}
         >
@@ -165,14 +165,14 @@ ref={ref}>
               <div className="flex mt-4">
                 <a
                   href={project.link}
-                  className="px-4 py-2 text-sm text-white cursor-pointer hover:text-white bg-[#5f0bb8] hover:bg-[#4c0898] transition-colors duration-300 rounded-md mr-2"
+                  className="px-4 py-2 text-sm text-white cursor-pointer hover:text-white bg-[#5f0bb8] hover:bg-[#4c0898] transition-colors duration-300 rounded-md mr-2 dark:bg-white dark:text-black dark:hover:bg-gray-300"
                   target="_blank"
                 >
                   View Project
                 </a>
                 <a
                   href={project.repo}
-                  className="px-4 py-2 text-sm text-white cursor-pointer hover:text-white bg-[#5f0bb8] hover:bg-[#4c0898] transition-colors duration-300 rounded-md"
+                  className="px-4 py-2 text-sm text-white cursor-pointer hover:text-white bg-[#5f0bb8] hover:bg-[#4c0898] transition-colors duration-300 rounded-md dark:bg-white dark:text-black dark:hover:bg-gray-300"
                   target="_blank"
                 >
                   GitHub Repo
@@ -182,7 +182,7 @@ ref={ref}>
             </div>
             
             </div>
-            <h2 className="text-lg font-semibold text-center text-white">
+            <h2 className="text-lg font-semibold text-center dark:text-white text-black ">
                   {project.name}
                 </h2>
           </div>

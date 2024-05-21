@@ -143,7 +143,7 @@ export default function ContactUs() {
               {/* <h3 className="text-lg font-semibold mb-2">Personal Information</h3> */}
               <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
                 <div>
-                  <label htmlFor="name" className="block font-semibold dark:text-white">
+                  <label htmlFor="name" className="block font-semibold dark:text-white text-black">
                     Name
                   </label>
                   <input
@@ -156,7 +156,7 @@ export default function ContactUs() {
                   />
                 </div>
                 <div>
-                <label htmlFor="phone" className="block font-semibold dark:text-white">
+                <label htmlFor="phone" className="block font-semibold dark:text-white text-black">
                   Contact Number
                 </label>
                   <input
@@ -175,7 +175,7 @@ export default function ContactUs() {
               {/* <h3 className="text-lg font-semibold mb-2">Contact Information</h3> */}
               <div>
                
-                <label htmlFor="email" className="block font-semibold dark:text-white">
+                <label htmlFor="email" className="block font-semibold dark:text-white text-black">
                     Email
                   </label>
                   <input
@@ -192,7 +192,7 @@ export default function ContactUs() {
             <div>
               {/* <h3 className="text-lg font-semibold mb-2">Inquiry</h3> */}
               <div>
-                <label htmlFor="message" className="block font-semibold dark:text-white">
+                <label htmlFor="message" className="block font-semibold dark:text-white text-black">
                   Message
                 </label>
                 <textarea
@@ -209,7 +209,7 @@ export default function ContactUs() {
             <div className="flex justify-end">
               <button
                 type="submit"
-                className="bg-[#5f0bb8] dark:bg-white dark:text-black text-white font-semibold py-2 px-4 rounded-md hover:bg-[#5f0bb860] focus:outline-none focus:bg-[#5f0bb860]"
+                className="bg-[#5f0bb8] dark:bg-white dark:text-black text-white font-semibold py-2 px-4 rounded-md hover:bg-[#5f0bb860] focus:outline-none focus:bg-[#5f0bb860] dark:hover:bg-gray-300"
               >
                 Send Message
               </button>
