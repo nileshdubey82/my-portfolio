@@ -102,7 +102,7 @@ function Navigation() {
             {theme ? <><CiLight /></> : <><MdDarkMode /></>}
           </button>
           <a
-            className="btn btn-md text-[#5F0BB8] font-bold hireme dark:text-[#000000] "
+            className="btn btn-md text-[#5F0BB8] font-bold hireme dark:text-[#000000] hidden lg:inline-flex md:inline-flex"
             href="mailto:nileshdubey060@gmail.com"
             target="_blank"
 
