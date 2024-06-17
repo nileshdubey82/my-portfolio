@@ -79,6 +79,7 @@ export default function HomePage() {
             </a>
           </div>
         </div>
+        
       </section>
       {/* For services */}
       <Services />

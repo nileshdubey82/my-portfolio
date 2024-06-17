@@ -4,9 +4,11 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { changeTheme } from "../Redux/Slices/ThemeSlice";
+import RazorpayPayment from "./RazorpayPayment";
 function Navigation() {
   const theme = useSelector((state) => { return state.ThemeSlice });
   const dispatch = useDispatch();
+
   return (
     <div className=" sm:p-0 sticky top-0 z-10">
       <div className="navbar bg-[#5F0BB8] dark:bg-[#263238] p-4 rounded-xl dark:text-[#CFD8DC]">
@@ -107,8 +109,10 @@ function Navigation() {
           >
             Hire me
           </a>
+          <RazorpayPayment/>
         </div>
       </div>
+      
     </div>
   );
 }
