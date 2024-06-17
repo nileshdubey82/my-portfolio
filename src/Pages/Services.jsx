@@ -36,7 +36,7 @@ function Services() {
       >
         Services
       </h1>
-      <p className="text-center text-gray-400 mt-5 dark:text-white ">
+      <p className="text-center text-gray-400 mt-5 dark:text-white px-[0px] lg:px-[285px] ">
         Full stack developer crafting responsive interfaces, robust backends,
         API integrations, and efficient deployments. Maintenance and support
         provided.

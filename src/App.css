@@ -5,52 +5,59 @@ body {
     font-family: "Lato", sans-serif;
 }
 
-
 @media (prefers-color-scheme: dark) {
-    .hireme{
+    .hireme {
         background-color: white !important;
     }
 
-    #contactme input, #contactme textarea{
+    #contactme input,
+    #contactme textarea {
         background-color: white;
         color: black;
     }
-  }
+}
 
-
-
-  .tawk-button {
+.tawk-button {
     background-color: red !important;
 }
 
-/* 
-@keyframes carouselAnim {
-    from {
-        transform: translate(0, 0);
-    }
-
-    to {
-        transform: translate(calc(-100% + (4*300px)));
-    }
+/* Text Marquee Effect */
+.marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 3em 0;
+    margin-top: 5rem;
+    transform: rotate(-2deg) scale(1.1);
+    /* background-color: #5f0bb8;
+    color: white; */
 }
 
-@media only screen and (max-width: 768px) {
-    .container .carousel-items {
-        animation: carouselAnim 60s infinite alternate linear;
-    }
-
-    @keyframes carouselAnim {
-        from {
-            transform: translate(0, 0);
-        }
-
-        to {
-            transform: translate(calc(-100% + (1*300px)));
-        }
-    }
+.marquee__text {
+    display: inline-block;
+    padding-left: 100%;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    animation: marquee-direction var(--_speed) linear infinite;
 }
 
-.carousel-focus:hover {
-    transition: all 0.8s;
-    transform: scale(1.1);
-} */
+.marquee__text[data-direction="rtl"] {
+    /* DON'T CHANGE */
+    --_right: 0%;
+    --_left: -100%;
+}
+
+.marquee__text[data-direction="ltr"] {
+    /* DON'T CHANGE */
+    --_right: -50%;
+    --_left: 0%;
+}
+
+@keyframes marquee-direction {
+    0% {
+        transform: translateX(var(--_right));
+    }
+    100% {
+        transform: translateX(var(--_left));
+    }
+}

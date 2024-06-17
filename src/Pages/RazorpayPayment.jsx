@@ -44,7 +44,7 @@ const RazorpayPayment = () => {
   </form>
 </dialog>
 
-      <button onClick={handlePayment} className='text-black bg-white p-2 rounded-md'>Pay ₹50</button>
+      <button onClick={handlePayment} className=''><img src='/Images/gift.png' className='w-[60px] h-[100%]'/></button>
     </div>
   );
 };
