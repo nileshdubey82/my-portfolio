@@ -11,7 +11,7 @@ import { AiOutlineWhatsApp } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
 import "react-toastify/dist/ReactToastify.css";
 import { motion, useAnimation } from "framer-motion";
-import { useInView } from 'react-intersection-observer';
+import { useInView } from "react-intersection-observer";
 export default function ContactUs() {
   const [formData, setFormData] = useState({
     name: "",
@@ -76,7 +76,6 @@ export default function ContactUs() {
       ref={ref}
       initial={{ opacity: 0, y: 20 }}
       animate={controls}
-
       className="bg-white   dark:bg-[#26323800] flex flex-wrap justify-center lg:px-20  lg:py-10 p-5 gap-10 w-[100%]"
       id="contactme"
     >
@@ -120,7 +119,11 @@ export default function ContactUs() {
               >
                 <AiFillInstagram />
               </a>
-              <a href="https://wa.link/4kvkuh" target="_blank" className="relative z-1">
+              <a
+                href="https://wa.link/4kvkuh"
+                target="_blank"
+                className="relative z-1"
+              >
                 <AiOutlineWhatsApp />
               </a>
               <a
@@ -130,7 +133,11 @@ export default function ContactUs() {
               >
                 <AiFillLinkedin />
               </a>
-              <a href="https://github.com/nileshdubey82" target="_blank" className="relative z-1">
+              <a
+                href="https://github.com/nileshdubey82"
+                target="_blank"
+                className="relative z-1"
+              >
                 <AiFillGithub />
               </a>
             </div>
@@ -143,30 +150,38 @@ export default function ContactUs() {
               {/* <h3 className="text-lg font-semibold mb-2">Personal Information</h3> */}
               <div className="grid lg:grid-cols-2 grid-cols-1 gap-4">
                 <div>
-                  <label htmlFor="name" className="block font-semibold dark:text-white text-black">
+                  <label
+                    htmlFor="name"
+                    className="block font-semibold dark:text-white text-black"
+                  >
                     Name
                   </label>
                   <input
                     type="text"
                     id="name"
                     name="name"
+                    placeholder="Enter Your Name"
                     value={formData.name}
                     onChange={handleChange}
                     className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-400"
                   />
                 </div>
                 <div>
-                <label htmlFor="phone" className="block font-semibold dark:text-white text-black">
-                  Contact Number
-                </label>
+                  <label
+                    htmlFor="phone"
+                    className="block font-semibold dark:text-white text-black"
+                  >
+                    Contact Number
+                  </label>
                   <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-400"
-                />
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    placeholder="Enter Your Contact Number"
+                    value={formData.phone}
+                    onChange={handleChange}
+                    className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-400"
+                  />
                 </div>
               </div>
             </div>
@@ -174,25 +189,31 @@ export default function ContactUs() {
             <div>
               {/* <h3 className="text-lg font-semibold mb-2">Contact Information</h3> */}
               <div>
-               
-                <label htmlFor="email" className="block font-semibold dark:text-white text-black">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-400"
-                  />
+                <label
+                  htmlFor="email"
+                  className="block font-semibold dark:text-white text-black"
+                >
+                  Email
+                </label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  value={formData.email}
+                  onChange={handleChange}
+                  placeholder="Enter Your Email"
+                  className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-400"
+                />
               </div>
             </div>
             {/* Inquiry Section */}
             <div>
               {/* <h3 className="text-lg font-semibold mb-2">Inquiry</h3> */}
               <div>
-                <label htmlFor="message" className="block font-semibold dark:text-white text-black">
+                <label
+                  htmlFor="message"
+                  className="block font-semibold dark:text-white text-black"
+                >
                   Message
                 </label>
                 <textarea
@@ -201,6 +222,7 @@ export default function ContactUs() {
                   value={formData.message}
                   onChange={handleChange}
                   rows="4"
+                  placeholder="Enter Your Message"
                   className="w-full border rounded-md py-2 px-3 focus:outline-none focus:border-blue-400"
                 ></textarea>
               </div>

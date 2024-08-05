@@ -1,63 +1,81 @@
-@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 
 body {
-    /* padding: 10px; */
-    font-family: "Lato", sans-serif;
+  /* padding: 10px; */
+  font-family: "Lato", sans-serif;
 }
 
 @media (prefers-color-scheme: dark) {
-    .hireme {
-        background-color: white !important;
-    }
+  .hireme {
+    background-color: white !important;
+  }
 
-    #contactme input,
-    #contactme textarea {
-        background-color: white;
-        color: black;
-    }
+  #contactme input,
+  #contactme textarea {
+    background-color: white;
+    color: black;
+  }
 }
 
 .tawk-button {
-    background-color: red !important;
+  background-color: red !important;
 }
 
 /* Text Marquee Effect */
 .marquee {
-    white-space: nowrap;
-    overflow: hidden;
-    margin: 0 auto;
-    padding: 3em 0;
-    margin-top: 5rem;
-    transform: rotate(-2deg) scale(1.1);
-    /* background-color: #5f0bb8;
+  white-space: nowrap;
+  overflow: hidden;
+  margin: 0 auto;
+  padding: 1em 0;
+  margin-top: 2rem;
+  transform: rotate(-2deg) scale(1.1);
+  /* background-color: #5f0bb8;
     color: white; */
 }
 
 .marquee__text {
-    display: inline-block;
-    padding-left: 100%;
-    font-size: 3.5rem;
-    text-transform: uppercase;
-    animation: marquee-direction var(--_speed) linear infinite;
+  display: inline-block;
+  /* padding-left: 100%; */
+  font-size: 1rem;
+  text-transform: uppercase;
+  animation: marquee-direction var(--_speed) linear infinite;
 }
 
 .marquee__text[data-direction="rtl"] {
-    /* DON'T CHANGE */
-    --_right: 0%;
-    --_left: -100%;
+  /* DON'T CHANGE */
+  --_right: 0%;
+  --_left: -100%;
 }
 
 .marquee__text[data-direction="ltr"] {
-    /* DON'T CHANGE */
-    --_right: -50%;
-    --_left: 0%;
+  /* DON'T CHANGE */
+  --_right: -50%;
+  --_left: 0%;
 }
 
 @keyframes marquee-direction {
-    0% {
-        transform: translateX(var(--_right));
-    }
-    100% {
-        transform: translateX(var(--_left));
-    }
+  0% {
+    transform: translateX(var(--_right));
+  }
+  100% {
+    transform: translateX(var(--_left));
+  }
+}
+
+@media (max-width: 768px) {
+  .marquee {
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0 auto;
+    padding: 8px 0;
+    margin-top: 20px;
+    transform: rotate(-2deg) scale(1.1);
+  }
+  .marquee__text {
+    display: inline-block;
+    padding-left: 100%;
+    font-size: 1rem;
+    text-transform: uppercase;
+    animation: marquee-direction var(--_speed) linear infinite;
+  }
 }
