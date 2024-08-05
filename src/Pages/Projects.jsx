@@ -117,7 +117,7 @@ export default function Portfolio() {
       <h1 className="text-center text-3xl font-bold dark:text-white text-black">
         Projects
       </h1>
-      <p className="text-center text-gray-500 mt-4 dark:text-white w-[50%]">
+      <p className="text-center text-gray-500 mt-4 dark:text-white lg:w-[50%]">
         I specialize in developing web and mobile applications using ReactJS,
         React Native, and WordPress, with a strong emphasis on user experience
         and efficient functionality.
