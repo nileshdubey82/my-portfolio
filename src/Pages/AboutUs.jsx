@@ -107,7 +107,7 @@ function AboutUs() {
                   for problem-solving, and a love for creative expression
                   through design.
                 </p>
-                <p className="lg:text-left text-[#4e4e4e] dark:text-[#fff] text-[14px] lg:text-lg mt-5">
+                <p className="lg:text-left text-[#4e4e4e] dark:text-[#fff] text-[14px] lg:text-lg mt-5 text-justify">
                   Welcome to my portfolio page! I'm a dedicated developer with
                   expertise in a range of technologies, including ReactJS,
                   ReactNative, HTML, CSS, Bootstrap, Tailwind CSS, JavaScript,
@@ -126,24 +126,27 @@ function AboutUs() {
                   your ideas to life with cutting-edge technology and seamless
                   user experiences!
                 </p>
+
                 <a
-                  className="btn btn-md my-4 hover:bg-[#5D0DB3] dark:bg-white dark:text-[black] hover:scale-[1.1] sm:btn-sm md:btn-md lg:btn-lg text-xl bg-[#5D0DB3] text-white"
-                  href="/Images/nilesh_Resume_final.pdf"
+                  className="btn btn-sm my-4 hover:bg-[#5D0DB3] dark:bg-white dark:text-[black] hover:scale-[1.1] sm:btn-sm md:btn-md lg:btn-md text-sm bg-[#5D0DB3] text-white"
+                  href="/Images/NileshDubeyFullStackDeveloper.pdf"
                   target="_blank"
                   download
                 >
-                  <BiCloudDownload className="text-4xl" />
+                  <BiCloudDownload className="text-xl lg:text-3xl" />
                   Download CV
                 </a>
               </div>
             </div>
-            <div className="flex-1 flex justify-center p-2">
+            {/* <div className="flex-1 flex justify-center p-2">
               <img
-                src={theme ? "/Images/profilepick.jpg" : "/Images/profilepick.jpg"}
+                src={
+                  theme ? "/Images/profilepick.jpg" : "/Images/profilepick.jpg"
+                }
                 className="w-[90%] rounded-md"
                 alt="Profile"
               />
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -174,20 +177,97 @@ function AboutUs() {
 
       <section>
         <div className="marquee bg-[#5f0bb8] text-white dark:bg-[#263238]">
-          <h2 className="marquee__text" data-direction="rtl" style={{ "--_speed": "16s" }}>
-          Crafting intuitive user experiences with ReactJS and React Native.
+          <h2
+            className="marquee__text"
+            data-direction="rtl"
+            style={{ "--_speed": "200s" }}
+          >
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
+            Crafting intuitive user experiences with ReactJS and React Native.
           </h2>
         </div>
 
         <div className="marquee bg-[#5f0bb8] text-white dark:bg-[#263238]">
-          <h2 className="marquee__text" data-direction="ltr" style={{ "--_speed": "13s" }}>
-          Transforming ideas into dynamic web interfaces with HTML, CSS, and Tailwind CSS.
+          <h2
+            className="marquee__text"
+            data-direction="ltr"
+            style={{ "--_speed": "200s" }}
+          >
+            Transforming ideas into dynamic web interfaces with HTML, CSS, and
+            Tailwind CSS. Transforming ideas into dynamic web interfaces with
+            HTML, CSS, and Tailwind CSS. Transforming ideas into dynamic web
+            interfaces with HTML, CSS, and Tailwind CSS. Transforming ideas into
+            dynamic web interfaces with HTML, CSS, and Tailwind CSS.
+            Transforming ideas into dynamic web interfaces with HTML, CSS, and
+            Tailwind CSS. Transforming ideas into dynamic web interfaces with
+            HTML, CSS, and Tailwind CSS. Transforming ideas into dynamic web
+            interfaces with HTML, CSS, and Tailwind CSS. Transforming ideas into
+            dynamic web interfaces with HTML, CSS, and Tailwind CSS.
+            Transforming ideas into dynamic web interfaces with HTML, CSS, and
+            Tailwind CSS. Transforming ideas into dynamic web interfaces with
+            HTML, CSS, and Tailwind CSS. Transforming ideas into dynamic web
+            interfaces with HTML, CSS, and Tailwind CSS. Transforming ideas into
+            dynamic web interfaces with HTML, CSS, and Tailwind CSS.
+            Transforming ideas into dynamic web interfaces with HTML, CSS, and
+            Tailwind CSS. Transforming ideas into dynamic web interfaces with
+            HTML, CSS, and Tailwind CSS. Transforming ideas into dynamic web
+            interfaces with HTML, CSS, and Tailwind CSS. Transforming ideas into
+            dynamic web interfaces with HTML, CSS, and Tailwind CSS.
+            Transforming ideas into dynamic web interfaces with HTML, CSS, and
+            Tailwind CSS. Transforming ideas into dynamic web interfaces with
+            HTML, CSS, and Tailwind CSS. Transforming ideas into dynamic web
+            interfaces with HTML, CSS, and Tailwind CSS. Transforming ideas into
+            dynamic web interfaces with HTML, CSS, and Tailwind CSS.
+            Transforming ideas into dynamic web interfaces with HTML, CSS, and
+            Tailwind CSS. Transforming ideas into dynamic web interfaces with
+            HTML, CSS, and Tailwind CSS.
           </h2>
         </div>
 
         <div className="marquee bg-[#5f0bb8] text-white dark:bg-[#263238]">
-          <h2 className="marquee__text" data-direction="rtl" style={{ "--_speed": "10s" }}>
-          Collaborating on GitHub to drive agile development and project success.
+          <h2
+            className="marquee__text"
+            data-direction="rtl"
+            style={{ "--_speed": "200s" }}
+          >
+            Collaborating on GitHub to drive agile development and project
+            success. Collaborating on GitHub to drive agile development and
+            project success. Collaborating on GitHub to drive agile development
+            and project success. Collaborating on GitHub to drive agile
+            development and project success. Collaborating on GitHub to drive
+            agile development and project success. Collaborating on GitHub to
+            drive agile development and project success. Collaborating on GitHub
+            to drive agile development and project success.Collaborating on
+            GitHub to drive agile development and project success. Collaborating
+            on GitHub to drive agile development and project success.
+            Collaborating on GitHub to drive agile development and project
+            success. Collaborating on GitHub to drive agile development and
+            project success. Collaborating on GitHub to drive agile development
+            and project success. Collaborating on GitHub to drive agile
+            development and project success. Collaborating on GitHub to drive
+            agile development and project success.
           </h2>
         </div>
       </section>

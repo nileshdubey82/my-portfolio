@@ -15,7 +15,7 @@ export default function HomePage() {
     <>
       <section
         id="hero-section"
-        className="bg-gradient-to-r from-[#5f0bb8] dark:from-[#263238] via-purple-500 dark:via-[#7497a8] to-[#5f0bb8] dark:to-[#263238] flex flex-cols justify-center lg:bg-cover  bg-no-repeat lg:h-[700px] lg:bg-top bg-cover  bg-top lg:p-20 p-5 h-[500px] relative rounded-xl mt-8 drop-shadow-md"
+        className="bg-gradient-to-r from-[#5f0bb8] dark:from-[#263238] via-purple-500 dark:via-[#7497a8] to-[#5f0bb8] dark:to-[#263238] flex flex-cols justify-center lg:bg-cover  bg-no-repeat lg:h-[600px] lg:bg-top bg-cover  bg-top lg:p-9 p-5 h-[500px] relative rounded-xl mt-8 drop-shadow-md"
       >
         <img
           src="/Images/bubble1.png"
@@ -52,7 +52,7 @@ export default function HomePage() {
         </h1>
 
         <div>
-          <h1 className="text-white lg:text-[70px] text-[30px] font-bold">
+          <h1 className="text-white lg:text-[44px] text-[30px] font-bold">
             Hi I &#39;M <span className="text-[#FFD700]">Nilesh Dubey</span>
           </h1>
           <div className="flex justify-center items-center gap-3 lg:text-3xl text-white text-xl">
