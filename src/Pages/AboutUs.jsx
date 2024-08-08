@@ -89,16 +89,17 @@ function AboutUs() {
   return (
     <motion.section
       id="aboutme"
-      className="lg:py-10 sm:py-5 py-10"
+      className="lg:py-10 sm:py-5 py-10 mb-3"
       initial={{ opacity: 0, y: 20 }}
       animate={controls}
       ref={ref}
+   
     >
-      <div className="bg-[#f9f8fb] p-3 lg:p-5 rounded-xl dark:bg-[#212121]">
+      <div className="bg-[#f9f8fb] p-3 lg:p-5 rounded-xl dark:bg-[#212121] ">
         <div className="bg-white rounded-xl p-5 dark:bg-[#263238]">
-          <div className="lg:flex mt-10 flex-wrap">
+          <div className="lg:flex lg:mt-10 flex-wrap">
             <div className="flex-1 items-center flex align-middle justify-center">
-              <div className="lg:px-10 mt-10 lg:mt-0">
+              <div className="lg:px-10  lg:mt-0">
                 <h1 className="text-black text-4xl text-left dark:text-[#fff]">
                   About Me
                 </h1>
@@ -126,8 +127,10 @@ function AboutUs() {
                   your ideas to life with cutting-edge technology and seamless
                   user experiences!
                 </p>
-
-                <a
+                <motion.a
+                  whileHover={{ scale: 1.2 }}
+                  onHoverStart={e => {}}
+                  onHoverEnd={e => {}}
                   className="btn btn-sm my-4 hover:bg-[#5D0DB3] dark:bg-white dark:text-[black] hover:scale-[1.1] sm:btn-sm md:btn-md lg:btn-md text-sm bg-[#5D0DB3] text-white"
                   href="/Images/NileshDubeyFullStackDeveloper.pdf"
                   target="_blank"
@@ -135,7 +138,7 @@ function AboutUs() {
                 >
                   <BiCloudDownload className="text-xl lg:text-3xl" />
                   Download CV
-                </a>
+                </motion.a>
               </div>
             </div>
             {/* <div className="flex-1 flex justify-center p-2">
