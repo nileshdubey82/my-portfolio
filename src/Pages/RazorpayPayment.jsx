@@ -6,7 +6,7 @@ const RazorpayPayment = () => {
     try {
       const options = {
         key: 'rzp_live_WMe1owLANjWhPZ', // Replace with your Razorpay API key
-        amount: 100, // Amount in the smallest currency unit (e.g., paise for INR)
+        amount: 10000, // Amount in the smallest currency unit (e.g., paise for INR)
         currency: 'INR',
         name: 'Nilesh Dubey',
         description: 'Buy a coffee',
@@ -44,7 +44,7 @@ const RazorpayPayment = () => {
   </form>
 </dialog>
 
-      <button onClick={handlePayment} className=''><img src='/Images/gift.png' className='w-[60px] h-[100%]'/></button>
+      <button onClick={handlePayment} className=''><img src='/Images/gift.png' className='w-[50px] h-[100%]'/></button>
     </div>
   );
 };

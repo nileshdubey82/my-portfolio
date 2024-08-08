@@ -11,7 +11,7 @@ function Navigation() {
 
   return (
     <div className=" sm:p-0 sticky top-0 z-10">
-      <div className="navbar bg-[#5F0BB8] dark:bg-[#263238] p-4 rounded-xl dark:text-[#CFD8DC]">
+      <div className="navbar bg-[#5F0BB8] dark:bg-[#263238] lg:p-4 rounded-xl dark:text-[#CFD8DC]">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
