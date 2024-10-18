@@ -3,8 +3,6 @@ import "react-toastify/dist/ReactToastify.css";
 
 const RazorpayPayment = () => {
   const RAZORPAY_KEY = import.meta.env.VITE_API_KEY;
-  const userName = import.meta.env.VITE_NILESH;
-  console.log(JSON.stringify(import.meta.env, null, 2))
   const loadRazorpayScript = () => {
     return new Promise((resolve) => {
       const script = document.createElement("script");
